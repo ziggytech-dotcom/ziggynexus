@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  /* ZTC — The Refine */
+  --bg: #050505;
+  --surface: #0D0D0D;
+  --elevated: #141414;
+  --border: rgba(201, 169, 110, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* Gold */
+  --gold: #C9A96E;
+  --gold-light: #E0C48A;
+  --gold-dim: rgba(201, 169, 110, 0.3);
+  --gold-glow: rgba(201, 169, 110, 0.08);
+
+  /* Text */
+  --text: #F5F0E8;
+  --text-secondary: rgba(245, 240, 232, 0.6);
+  --text-muted: rgba(245, 240, 232, 0.35);
+
+  /* Status colors */
+  --status-pending: #C9A96E;
+  --status-approved: #4ADE80;
+  --status-changes: #FB923C;
+  --status-rejected: #F87171;
+  --status-in-progress: #60A5FA;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-dim);
+  border-radius: 2px;
+}
+
+/* Gold shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold) 0%,
+    var(--gold-light) 40%,
+    var(--gold) 60%,
+    var(--gold-light) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Gold border glow */
+.gold-glow-border {
+  border: 1px solid var(--border);
+  box-shadow: 0 0 20px var(--gold-glow), inset 0 0 20px var(--gold-glow);
+}
