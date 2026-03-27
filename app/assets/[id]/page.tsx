@@ -66,7 +66,7 @@ export default async function AssetDetailPage({
         ← Back to Asset Library
       </Link>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 320px', gap: '32px', alignItems: 'start' }}>
+      <div className="grid-asset-detail">
 
         {/* Main */}
         <div>

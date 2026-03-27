@@ -94,3 +94,119 @@ body {
   border: 1px solid var(--border);
   box-shadow: 0 0 20px var(--gold-glow), inset 0 0 20px var(--gold-glow);
 }
+
+/* ============================================================
+   PORTAL LAYOUT — shared by all sections
+   ============================================================ */
+.portal-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.portal-main {
+  flex: 1;
+  padding: 40px 48px;
+  overflow-y: auto;
+  background: var(--bg);
+  min-width: 0; /* prevent flex overflow */
+}
+
+/* ============================================================
+   MOBILE NAV
+   ============================================================ */
+.mobile-topbar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sidenav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 200;
+}
+
+.sidenav-overlay.open {
+  display: block;
+}
+
+/* ============================================================
+   RESPONSIVE GRID HELPERS
+   ============================================================ */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.grid-detail {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+.grid-asset-detail {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ============================================================
+   MOBILE BREAKPOINT
+   ============================================================ */
+@media (max-width: 768px) {
+  .portal-layout {
+    flex-direction: column;
+  }
+
+  .portal-sidenav {
+    display: none !important;
+  }
+
+  .portal-sidenav.mobile-open {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 300;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-topbar {
+    display: flex !important;
+  }
+
+  .portal-main {
+    padding: 24px 16px;
+  }
+
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-detail {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-asset-detail {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-main {
+    padding: 16px 12px;
+  }
+}

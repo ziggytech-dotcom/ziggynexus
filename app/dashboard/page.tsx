@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { PHASE_STATUS_LABELS, TYPE_LABELS } from '@/lib/types'
+import { redirect } from 'next/navigation'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -11,6 +12,11 @@ export default async function DashboardPage() {
     .select('*')
     .eq('email', user?.email)
     .single()
+
+  // First-time clients: redirect to onboarding
+  if (client && client.onboarding_completed === false) {
+    redirect('/onboarding')
+  }
 
   // Get pending approvals count
   const { count: pendingCount } = await supabase
@@ -103,7 +109,7 @@ export default async function DashboardPage() {
       </div>
 
       {/* Main grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+      <div className="grid-2col">
 
         {/* Project Status */}
         <div

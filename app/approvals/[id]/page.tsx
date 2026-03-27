@@ -58,7 +58,7 @@ export default async function ApprovalDetailPage({
         ← Back to Approvals
       </Link>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '32px', alignItems: 'start' }}>
+      <div className="grid-detail">
         {/* Main: Approval card */}
         <div>
           <ApprovalCard deliverable={deliverable} />
