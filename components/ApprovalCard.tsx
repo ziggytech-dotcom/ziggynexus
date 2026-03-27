@@ -21,6 +21,18 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
 
   const supabase = createClient()
 
+  async function sendStatusEmail(newStatus: string) {
+    try {
+      await fetch('/api/emails/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'approval_status', deliverableId: deliverable.id, newStatus }),
+      })
+    } catch {
+      // Non-critical — don't block the UI update
+    }
+  }
+
   async function handleApprove() {
     setLoading('approve')
     setError(null)
@@ -40,6 +52,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
     } else {
       setLocalStatus('approved')
       onStatusChange?.(deliverable.id, 'approved')
+      await sendStatusEmail('approved')
     }
     setLoading(null)
   }
@@ -74,6 +87,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
       setShowChangesModal(false)
       setChangesNote('')
       onStatusChange?.(deliverable.id, 'changes_requested')
+      await sendStatusEmail('changes_requested')
     }
     setLoading(null)
   }
@@ -109,6 +123,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
       setShowRejectModal(false)
       setRejectReason('')
       onStatusChange?.(deliverable.id, 'rejected')
+      await sendStatusEmail('rejected')
     }
     setLoading(null)
   }
