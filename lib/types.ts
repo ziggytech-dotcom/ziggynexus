@@ -13,8 +13,54 @@ export interface Client {
   avatar_url: string | null
   package: string | null
   status: string
+  // Sprint 1: branding + onboarding
+  brand_logo_url: string | null
+  brand_primary_color: string | null
+  brand_name: string | null
+  onboarding_completed: boolean
   created_at: string
   updated_at: string
+}
+
+export interface Invoice {
+  id: string
+  client_id: string
+  stripe_invoice_id: string | null
+  stripe_subscription_id: string | null
+  stripe_customer_id: string | null
+  amount_cents: number
+  currency: string
+  status: 'draft' | 'open' | 'paid' | 'void' | 'uncollectible'
+  due_date: string | null
+  paid_at: string | null
+  description: string | null
+  invoice_number: string | null
+  recurring: boolean
+  recurring_interval: 'monthly' | 'quarterly' | 'annually' | null
+  reminder_3d_sent_at: string | null
+  reminder_7d_sent_at: string | null
+  reminder_14d_sent_at: string | null
+  created_at: string
+  updated_at: string
+}
+
+export interface ClientUpload {
+  id: string
+  client_id: string
+  file_name: string
+  file_path: string
+  file_url: string | null
+  file_size: number | null
+  file_type: string | null
+  description: string | null
+  uploaded_by: string | null
+  created_at: string
+}
+
+export interface ClientBranding {
+  brand_logo_url: string | null
+  brand_primary_color: string | null
+  brand_name: string | null
 }
 
 export interface Deliverable {
