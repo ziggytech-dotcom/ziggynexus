@@ -181,6 +181,57 @@ export function invoiceReminderEmail(params: InvoiceReminderParams): string {
   return baseTemplate(branding, body)
 }
 
+interface WorkspaceActivityParams {
+  branding: BrandingParams
+  clientName: string
+  eventType: string
+  eventDescription: string
+  portalAdminUrl: string
+  occurredAt: string
+}
+
+export function workspaceActivityEmail(params: WorkspaceActivityParams): string {
+  const { branding, clientName, eventType, eventDescription, portalAdminUrl, occurredAt } = params
+  const color = branding.primaryColor || '#C9A96E'
+
+  const eventIcons: Record<string, string> = {
+    file_viewed: '📂',
+    deliverable_viewed: '👁',
+    payment_made: '💳',
+    message_sent: '💬',
+    upload_completed: '📁',
+    approval_submitted: '✓',
+  }
+  const icon = eventIcons[eventType] ?? '◆'
+
+  const body = `
+    <h1 style="font-size:24px;font-weight:400;color:#F5F0E8;margin:0 0 8px 0;">
+      Client Portal Activity
+    </h1>
+    <p style="font-size:15px;color:rgba(245,240,232,0.6);margin:0 0 28px 0;">
+      A client just took an action in their portal.
+    </p>
+    <div style="background:#141414;border:1px solid rgba(255,255,255,0.06);border-left:3px solid ${color};border-radius:8px;padding:20px 24px;margin-bottom:28px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <span style="font-size:24px;">${icon}</span>
+        <div>
+          <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:${color};font-weight:500;margin-bottom:4px;">
+            ${eventType.replace(/_/g, ' ')}
+          </div>
+          <div style="font-size:16px;color:#F5F0E8;font-weight:500;">${clientName}</div>
+        </div>
+      </div>
+      <div style="font-size:14px;color:rgba(245,240,232,0.7);line-height:1.6;">${eventDescription}</div>
+      <div style="font-size:12px;color:rgba(245,240,232,0.35);margin-top:10px;">${occurredAt}</div>
+    </div>
+    <a href="${portalAdminUrl}"
+       style="display:inline-block;padding:12px 24px;background:linear-gradient(135deg,${color},${color}CC);border-radius:8px;color:#050505;font-size:14px;font-weight:600;text-decoration:none;">
+      View Admin Panel →
+    </a>
+  `
+  return baseTemplate(branding, body)
+}
+
 export function welcomeEmail(params: WelcomeEmailParams): string {
   const { branding, clientName, portalUrl } = params
   const color = branding.primaryColor || '#C9A96E'

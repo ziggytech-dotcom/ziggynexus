@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import ApprovalCard from '@/components/ApprovalCard'
 import Link from 'next/link'
 import type { ApprovalComment, DeliverableVersion } from '@/lib/types'
+import ActivityTracker from '@/components/ActivityTracker'
 
 export default async function ApprovalDetailPage({
   params,
@@ -42,6 +43,10 @@ export default async function ApprovalDetailPage({
 
   return (
     <div className="fade-in">
+      <ActivityTracker
+        eventType="deliverable_viewed"
+        eventData={{ deliverable_id: deliverable.id, deliverable_title: deliverable.title }}
+      />
       {/* Back link */}
       <Link
         href="/approvals"

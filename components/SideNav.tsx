@@ -10,10 +10,12 @@ import type { ClientBranding } from '@/lib/types'
 const navItems = [
   { href: '/dashboard', icon: '⬡', label: 'Dashboard' },
   { href: '/approvals', icon: '✓', label: 'Approvals' },
+  { href: '/progress', icon: '◈', label: 'Progress' },
   { href: '/assets', icon: '◫', label: 'Assets' },
   { href: '/uploads', icon: '📁', label: 'Uploads' },
   { href: '/invoices', icon: '📄', label: 'Invoices' },
   { href: '/calendar', icon: '◷', label: 'Calendar' },
+  { href: '/help', icon: '?', label: 'Help & FAQ' },
 ]
 
 interface SideNavProps {

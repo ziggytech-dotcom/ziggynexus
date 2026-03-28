@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
-import { PHASE_STATUS_LABELS, TYPE_LABELS } from '@/lib/types'
+import { TYPE_LABELS } from '@/lib/types'
+import type { ProjectPhase } from '@/lib/types'
 import { redirect } from 'next/navigation'
 
 export default async function DashboardPage() {
@@ -120,28 +121,63 @@ export default async function DashboardPage() {
             padding: '28px',
           }}
         >
-          <h2
-            style={{
-              fontFamily: 'var(--font-playfair)',
-              fontSize: '18px',
-              fontWeight: 400,
-              marginBottom: '20px',
-              color: 'var(--text)',
-            }}
-          >
-            📊 Project Status
-          </h2>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+            <h2
+              style={{
+                fontFamily: 'var(--font-playfair)',
+                fontSize: '18px',
+                fontWeight: 400,
+                color: 'var(--text)',
+              }}
+            >
+              📊 Project Status
+            </h2>
+            <a href="/progress" style={{ fontSize: '12px', color: 'var(--gold)', textDecoration: 'none' }}>
+              Full view →
+            </a>
+          </div>
           {phases && phases.length > 0 ? (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {phases.map((phase) => (
-                <PhaseRow
-                  key={phase.id}
-                  label={phase.phase.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
-                  status={phase.status}
-                  dueDate={phase.due_date}
-                />
-              ))}
-            </div>
+            <>
+              {/* Overall progress bar */}
+              {(() => {
+                const phasesTyped = phases as ProjectPhase[]
+                const total = phasesTyped.length
+                const overallPct = total === 0 ? 0 : Math.round(
+                  phasesTyped.reduce((sum, p) => {
+                    if (p.status === 'complete') return sum + 100
+                    if (p.status === 'pending' || p.status === 'on_hold') return sum + 0
+                    return sum + (p.progress_pct ?? 0)
+                  }, 0) / total
+                )
+                return (
+                  <div style={{ marginBottom: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+                      <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Overall Progress</span>
+                      <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--gold)' }}>{overallPct}%</span>
+                    </div>
+                    <div style={{ height: '6px', background: 'var(--elevated)', borderRadius: '6px', overflow: 'hidden' }}>
+                      <div style={{
+                        height: '100%',
+                        width: `${overallPct}%`,
+                        background: 'linear-gradient(90deg, var(--gold-dim), var(--gold))',
+                        borderRadius: '6px',
+                        transition: 'width 0.6s ease',
+                      }} />
+                    </div>
+                  </div>
+                )
+              })()}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {phases.map((phase) => (
+                  <PhaseRow
+                    key={phase.id}
+                    label={phase.phase.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}
+                    status={phase.status}
+                    dueDate={phase.due_date}
+                  />
+                ))}
+              </div>
+            </>
           ) : (
             <div
               style={{

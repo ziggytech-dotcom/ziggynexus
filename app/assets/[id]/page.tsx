@@ -2,6 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import Link from 'next/link'
 import type { ApprovalComment, DeliverableVersion } from '@/lib/types'
 import { TYPE_LABELS, STATUS_LABELS } from '@/lib/types'
+import ActivityTracker from '@/components/ActivityTracker'
 
 export default async function AssetDetailPage({
   params,
@@ -40,6 +41,9 @@ export default async function AssetDetailPage({
     )
   }
 
+  // Track that the client viewed this asset
+  // (component fires API call client-side on mount)
+
   const statusColors: Record<string, { color: string; bg: string }> = {
     pending_review: { color: 'var(--status-pending)', bg: 'rgba(201,169,110,0.1)' },
     approved: { color: 'var(--status-approved)', bg: 'rgba(74,222,128,0.1)' },
@@ -50,6 +54,10 @@ export default async function AssetDetailPage({
 
   return (
     <div className="fade-in">
+      <ActivityTracker
+        eventType="file_viewed"
+        eventData={{ deliverable_id: asset.id, file_name: asset.title }}
+      />
       {/* Back */}
       <Link
         href="/assets"

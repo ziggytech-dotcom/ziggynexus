@@ -18,6 +18,9 @@ export interface Client {
   brand_primary_color: string | null
   brand_name: string | null
   onboarding_completed: boolean
+  // Sprint 2: custom domain
+  custom_domain: string | null
+  custom_domain_verified: boolean
   created_at: string
   updated_at: string
 }
@@ -109,8 +112,42 @@ export interface ProjectPhase {
   due_date: string | null
   notes: string | null
   order_index: number
+  // Sprint 2: progress percentage
+  progress_pct: number
   created_at: string
   updated_at: string
+}
+
+// Sprint 2 additions
+
+export interface KbArticle {
+  id: string
+  client_id: string | null
+  title: string
+  slug: string
+  content: string
+  category: string | null
+  published: boolean
+  created_at: string
+  updated_at: string
+}
+
+export type PortalEventType =
+  | 'file_viewed'
+  | 'deliverable_viewed'
+  | 'payment_made'
+  | 'message_sent'
+  | 'upload_completed'
+  | 'approval_submitted'
+
+export interface PortalActivity {
+  id: string
+  client_id: string
+  event_type: PortalEventType
+  event_data: Record<string, unknown>
+  user_email: string | null
+  workspace_notified: boolean
+  created_at: string
 }
 
 export interface SocialCalendarItem {
