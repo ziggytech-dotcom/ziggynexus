@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 
 export default function LoginPage() {
@@ -266,6 +267,25 @@ export default function LoginPage() {
           }}
         >
           🔒 Your workspace is private. Only you and the ZiggyTech Creative team can access it.
+        </p>
+
+        <p
+          style={{
+            textAlign: 'center',
+            color: 'rgba(245,240,232,0.28)',
+            fontSize: '11px',
+            marginTop: '12px',
+            lineHeight: 1.6,
+          }}
+        >
+          By accessing this portal you agree to our{' '}
+          <Link href="/privacy" style={{ color: 'rgba(201,169,110,0.55)', textDecoration: 'underline' }}>
+            Privacy Policy
+          </Link>{' '}
+          and{' '}
+          <Link href="/terms" style={{ color: 'rgba(201,169,110,0.55)', textDecoration: 'underline' }}>
+            Terms of Service
+          </Link>.
         </p>
       </div>
     </main>
