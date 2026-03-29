@@ -158,7 +158,7 @@ export default function KbAdminPage() {
           onClick={() => { setShowForm(!showForm); setEditingId(null); resetForm() }}
           style={{
             padding: '10px 20px',
-            background: 'var(--gold)',
+            background: '#10b981',
             border: 'none',
             borderRadius: '8px',
             color: '#050505',
@@ -218,14 +218,14 @@ export default function KbAdminPage() {
 
             <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
               <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '13px', color: 'var(--text-secondary)' }}>
-                <input type="checkbox" checked={form.published} onChange={(e) => update('published', e.target.checked)} style={{ accentColor: 'var(--gold)' }} />
+                <input type="checkbox" checked={form.published} onChange={(e) => update('published', e.target.checked)} style={{ accentColor: '#10b981' }} />
                 Published (visible to clients)
               </label>
               {error && <div style={{ fontSize: '12px', color: 'var(--status-rejected)' }}>{error}</div>}
               <button type="submit" disabled={saving} style={{
                 marginLeft: 'auto',
                 padding: '10px 22px',
-                background: 'var(--gold)',
+                background: '#10b981',
                 border: 'none',
                 borderRadius: '8px',
                 color: '#050505',

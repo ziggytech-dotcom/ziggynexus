@@ -61,7 +61,7 @@ export default async function DashboardPage() {
             fontSize: '12px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: 'var(--gold)',
+            color: '#10b981',
             marginBottom: '8px',
             fontWeight: 500,
           }}
@@ -132,7 +132,7 @@ export default async function DashboardPage() {
             >
               📊 Project Status
             </h2>
-            <a href="/progress" style={{ fontSize: '12px', color: 'var(--gold)', textDecoration: 'none' }}>
+            <a href="/progress" style={{ fontSize: '12px', color: '#10b981', textDecoration: 'none' }}>
               Full view →
             </a>
           </div>
@@ -153,13 +153,13 @@ export default async function DashboardPage() {
                   <div style={{ marginBottom: '20px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
                       <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>Overall Progress</span>
-                      <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--gold)' }}>{overallPct}%</span>
+                      <span style={{ fontSize: '12px', fontWeight: 600, color: '#10b981' }}>{overallPct}%</span>
                     </div>
                     <div style={{ height: '6px', background: 'var(--elevated)', borderRadius: '6px', overflow: 'hidden' }}>
                       <div style={{
                         height: '100%',
                         width: `${overallPct}%`,
-                        background: 'linear-gradient(90deg, var(--gold-dim), var(--gold))',
+                        background: 'linear-gradient(90deg, var(--gold-dim), #10b981)',
                         borderRadius: '6px',
                         transition: 'width 0.6s ease',
                       }} />
@@ -295,7 +295,7 @@ export default async function DashboardPage() {
                     alignItems: 'flex-start',
                   }}
                 >
-                  <span style={{ color: 'var(--gold)', fontSize: '16px' }}>◆</span>
+                  <span style={{ color: '#10b981', fontSize: '16px' }}>◆</span>
                   <div>
                     <div style={{ fontSize: '14px', fontWeight: 500, color: 'var(--text)', marginBottom: '2px' }}>
                       {n.title}
@@ -338,7 +338,7 @@ function StatCard({
         style={{
           fontSize: '36px',
           fontFamily: 'var(--font-playfair)',
-          color: highlight ? 'var(--gold)' : 'var(--text)',
+          color: highlight ? '#10b981' : 'var(--text)',
           fontWeight: 400,
           marginBottom: '6px',
         }}
@@ -359,7 +359,7 @@ function StatCard({
           href={action.href}
           style={{
             fontSize: '12px',
-            color: 'var(--gold)',
+            color: '#10b981',
             textDecoration: 'none',
             fontWeight: 500,
           }}

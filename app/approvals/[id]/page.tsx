@@ -34,7 +34,7 @@ export default async function ApprovalDetailPage({
     return (
       <div style={{ padding: '40px', color: 'var(--text-secondary)' }}>
         Deliverable not found.{' '}
-        <Link href="/approvals" style={{ color: 'var(--gold)' }}>
+        <Link href="/approvals" style={{ color: '#10b981' }}>
           Back to approvals
         </Link>
       </div>
@@ -111,7 +111,7 @@ export default async function ApprovalDetailPage({
                       <div style={{ fontSize: '13px', fontWeight: 500, color: 'var(--text)' }}>
                         Version {v.version}
                         {v.version === deliverable.version && (
-                          <span style={{ color: 'var(--gold)', marginLeft: '6px', fontSize: '11px' }}>
+                          <span style={{ color: '#10b981', marginLeft: '6px', fontSize: '11px' }}>
                             Current
                           </span>
                         )}
@@ -129,7 +129,7 @@ export default async function ApprovalDetailPage({
                         rel="noopener noreferrer"
                         style={{
                           fontSize: '12px',
-                          color: 'var(--gold)',
+                          color: '#10b981',
                           textDecoration: 'none',
                         }}
                       >
@@ -174,13 +174,13 @@ export default async function ApprovalDetailPage({
                         ? 'var(--gold-glow)'
                         : 'var(--elevated)',
                       borderRadius: '7px',
-                      borderLeft: `3px solid ${c.author_role === 'ztc_team' ? 'var(--gold)' : 'var(--border-subtle)'}`,
+                      borderLeft: `3px solid ${c.author_role === 'ztc_team' ? '#10b981' : 'var(--border-subtle)'}`,
                     }}
                   >
                     <div
                       style={{
                         fontSize: '11px',
-                        color: c.author_role === 'ztc_team' ? 'var(--gold)' : 'var(--text-secondary)',
+                        color: c.author_role === 'ztc_team' ? '#10b981' : 'var(--text-secondary)',
                         fontWeight: 600,
                         marginBottom: '4px',
                         textTransform: 'uppercase',

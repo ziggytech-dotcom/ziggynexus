@@ -48,12 +48,12 @@ export default async function AssetsPage() {
             fontSize: '12px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: 'var(--gold)',
+            color: '#10b981',
             marginBottom: '8px',
             fontWeight: 500,
           }}
         >
-          NexusIQ™
+          ZiggyNexus™
         </div>
         <h1
           style={{

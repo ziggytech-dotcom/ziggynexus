@@ -23,7 +23,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               fontSize: '18px',
               color: 'var(--text)',
             }}>
-              NexusIQ<span style={{ color: 'var(--gold)' }}>™</span>{' '}
+              ZiggyNexus<span style={{ color: '#10b981' }}>™</span>{' '}
               <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontFamily: 'inherit' }}>
                 Admin
               </span>

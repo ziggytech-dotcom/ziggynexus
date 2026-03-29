@@ -46,12 +46,12 @@ export default async function UploadsPage() {
             fontSize: '12px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: 'var(--gold)',
+            color: '#10b981',
             marginBottom: '8px',
             fontWeight: 500,
           }}
         >
-          NexusIQ™
+          ZiggyNexus™
         </div>
         <h1
           style={{
@@ -155,7 +155,7 @@ export default async function UploadsPage() {
                       rel="noopener noreferrer"
                       style={{
                         fontSize: '13px',
-                        color: 'var(--gold)',
+                        color: '#10b981',
                         textDecoration: 'none',
                         padding: '6px 12px',
                         background: 'var(--gold-glow)',

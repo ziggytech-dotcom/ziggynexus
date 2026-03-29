@@ -66,7 +66,7 @@ export default function SideNav({ branding }: SideNavProps) {
               style={{
                 fontSize: '11px',
                 letterSpacing: '0.15em',
-                color: 'var(--gold)',
+                color: '#10b981',
                 textTransform: 'uppercase',
                 marginBottom: '4px',
                 fontWeight: 500,
@@ -82,7 +82,7 @@ export default function SideNav({ branding }: SideNavProps) {
                 fontWeight: 400,
               }}
             >
-              NexusIQ<span style={{ color: 'var(--gold)' }}>™</span>
+              ZiggyNexus<span style={{ color: '#10b981' }}>™</span>
             </div>
           </>
         )}
@@ -105,7 +105,7 @@ export default function SideNav({ branding }: SideNavProps) {
                 borderRadius: '8px',
                 fontSize: '14px',
                 fontWeight: isActive ? 500 : 400,
-                color: isActive ? 'var(--gold)' : 'var(--text-secondary)',
+                color: isActive ? '#10b981' : 'var(--text-secondary)',
                 background: isActive ? 'var(--gold-glow)' : 'transparent',
                 border: isActive ? '1px solid var(--border)' : '1px solid transparent',
                 textDecoration: 'none',
@@ -164,7 +164,7 @@ export default function SideNav({ branding }: SideNavProps) {
                 color: 'var(--text)',
               }}
             >
-              NexusIQ<span style={{ color: 'var(--gold)' }}>™</span>
+              ZiggyNexus<span style={{ color: '#10b981' }}>™</span>
             </span>
           )}
         </div>

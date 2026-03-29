@@ -86,12 +86,12 @@ export default async function CalendarPage() {
             fontSize: '12px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: 'var(--gold)',
+            color: '#10b981',
             marginBottom: '8px',
             fontWeight: 500,
           }}
         >
-          NexusIQ™
+          ZiggyNexus™
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <div>
@@ -240,7 +240,7 @@ export default async function CalendarPage() {
                       style={{
                         fontSize: '13px',
                         fontWeight: isToday ? 600 : 400,
-                        color: isToday ? 'var(--gold)' : 'var(--text-secondary)',
+                        color: isToday ? '#10b981' : 'var(--text-secondary)',
                         marginBottom: '4px',
                         display: 'flex',
                         alignItems: 'center',
@@ -254,7 +254,7 @@ export default async function CalendarPage() {
                             fontSize: '9px',
                             fontWeight: 600,
                             letterSpacing: '0.05em',
-                            color: 'var(--gold)',
+                            color: '#10b981',
                             textTransform: 'uppercase',
                           }}
                         >

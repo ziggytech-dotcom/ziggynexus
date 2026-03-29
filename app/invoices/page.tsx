@@ -63,12 +63,12 @@ export default async function InvoicesPage() {
               fontSize: '12px',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              color: 'var(--gold)',
+              color: '#10b981',
               marginBottom: '8px',
               fontWeight: 500,
             }}
           >
-            NexusIQ™
+            ZiggyNexus™
           </div>
           <h1
             style={{
@@ -116,7 +116,7 @@ export default async function InvoicesPage() {
               style={{
                 fontFamily: 'var(--font-playfair)',
                 fontSize: '36px',
-                color: 'var(--gold)',
+                color: '#10b981',
                 fontWeight: 400,
               }}
             >
@@ -229,7 +229,7 @@ function InvoiceList({
               <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '2px' }}>
                 {invoice.invoice_number ?? invoice.id.slice(0, 8).toUpperCase()}
                 {invoice.recurring && (
-                  <span style={{ marginLeft: '6px', color: 'var(--gold)' }}>
+                  <span style={{ marginLeft: '6px', color: '#10b981' }}>
                     ↻ {invoice.recurring_interval ?? 'recurring'}
                   </span>
                 )}

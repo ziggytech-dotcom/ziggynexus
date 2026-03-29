@@ -120,7 +120,7 @@ export default function OnboardingPage() {
             style={{
               fontSize: '11px',
               letterSpacing: '0.18em',
-              color: 'var(--gold)',
+              color: '#10b981',
               marginBottom: '10px',
               fontWeight: 500,
               textTransform: 'uppercase',
@@ -158,7 +158,7 @@ export default function OnboardingPage() {
               <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
                 Step {step + 1} of {STEPS.length - 1}
               </span>
-              <span style={{ fontSize: '12px', color: 'var(--gold)' }}>{progressPct}%</span>
+              <span style={{ fontSize: '12px', color: '#10b981' }}>{progressPct}%</span>
             </div>
             <div
               style={{
@@ -172,7 +172,7 @@ export default function OnboardingPage() {
                 style={{
                   height: '100%',
                   width: `${progressPct}%`,
-                  background: 'linear-gradient(90deg, var(--gold), var(--gold-light))',
+                  background: 'linear-gradient(90deg, #10b981, var(--gold-light))',
                   borderRadius: '2px',
                   transition: 'width 0.4s ease',
                 }}
@@ -257,7 +257,7 @@ export default function OnboardingPage() {
                 style={{
                   width: '100%',
                   padding: '14px',
-                  background: 'linear-gradient(135deg, var(--gold), var(--gold-light))',
+                  background: 'linear-gradient(135deg, #10b981, var(--gold-light))',
                   border: 'none',
                   borderRadius: '8px',
                   color: '#050505',
@@ -377,7 +377,7 @@ export default function OnboardingPage() {
                   style={{
                     flex: 1,
                     padding: '12px',
-                    background: loading ? 'var(--gold-dim)' : 'linear-gradient(135deg, var(--gold), var(--gold-light))',
+                    background: loading ? 'var(--gold-dim)' : 'linear-gradient(135deg, #10b981, var(--gold-light))',
                     border: 'none',
                     borderRadius: '8px',
                     color: '#050505',
@@ -422,7 +422,7 @@ export default function OnboardingPage() {
                 onClick={() => router.push('/dashboard')}
                 style={{
                   padding: '14px 32px',
-                  background: 'linear-gradient(135deg, var(--gold), var(--gold-light))',
+                  background: 'linear-gradient(135deg, #10b981, var(--gold-light))',
                   border: 'none',
                   borderRadius: '8px',
                   color: '#050505',
@@ -585,7 +585,7 @@ function StepButtons({
         style={{
           flex: 1,
           padding: '12px',
-          background: 'linear-gradient(135deg, var(--gold), var(--gold-light))',
+          background: 'linear-gradient(135deg, #10b981, var(--gold-light))',
           border: 'none',
           borderRadius: '8px',
           color: '#050505',

@@ -70,7 +70,7 @@ export default function LoginPage() {
             style={{
               fontSize: '13px',
               letterSpacing: '0.18em',
-              color: 'var(--gold)',
+              color: '#10b981',
               marginBottom: '12px',
               fontWeight: 500,
               textTransform: 'uppercase',
@@ -88,7 +88,7 @@ export default function LoginPage() {
               marginBottom: '8px',
             }}
           >
-            NexusIQ<span style={{ color: 'var(--gold)' }}>™</span>
+            ZiggyNexus<span style={{ color: '#10b981' }}>™</span>
           </h1>
           <p
             style={{
@@ -235,7 +235,7 @@ export default function LoginPage() {
                 }}
               >
                 We&apos;ve sent a secure sign-in link to{' '}
-                <strong style={{ color: 'var(--gold)' }}>{email}</strong>.
+                <strong style={{ color: '#10b981' }}>{email}</strong>.
                 <br />
                 Click the link in your email to access your portal.
               </p>

@@ -95,7 +95,7 @@ export default async function AdminPage() {
           >
             <div style={{
               fontSize: '24px',
-              color: 'var(--gold)',
+              color: '#10b981',
               marginBottom: '12px',
             }}>
               {action.icon}
@@ -224,7 +224,7 @@ function StatCard({ label, value, highlight }: { label: string; value: string; h
       <div style={{
         fontSize: '32px',
         fontFamily: 'var(--font-playfair)',
-        color: highlight ? 'var(--gold)' : 'var(--text)',
+        color: highlight ? '#10b981' : 'var(--text)',
         fontWeight: 400,
         marginBottom: '4px',
       }}>

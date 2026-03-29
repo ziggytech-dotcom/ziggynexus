@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy — NexusIQ',
+  title: 'Cookie Policy — ZiggyNexus',
   description: 'How ZiggyTech Ventures LLC uses cookies and tracking technologies.',
 }
 

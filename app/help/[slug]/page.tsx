@@ -44,7 +44,7 @@ export default async function ArticlePage({ params }: Props) {
       <div style={{ marginBottom: '32px' }}>
         <Link href="/help" style={{
           fontSize: '13px',
-          color: 'var(--gold)',
+          color: '#10b981',
           textDecoration: 'none',
           display: 'inline-flex',
           alignItems: 'center',
@@ -67,7 +67,7 @@ export default async function ArticlePage({ params }: Props) {
             fontSize: '11px',
             letterSpacing: '0.12em',
             textTransform: 'uppercase',
-            color: 'var(--gold)',
+            color: '#10b981',
             fontWeight: 500,
             marginBottom: '12px',
           }}>
@@ -153,5 +153,5 @@ function inlineFormat(text: string): string {
   return text
     .replace(/\*\*(.+?)\*\*/g, '<strong style="color:var(--text);">$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/`(.+?)`/g, '<code style="font-size:13px;background:var(--elevated);padding:1px 5px;border-radius:3px;color:var(--gold);">$1</code>')
+    .replace(/`(.+?)`/g, '<code style="font-size:13px;background:var(--elevated);padding:1px 5px;border-radius:3px;color:#10b981;">$1</code>')
 }

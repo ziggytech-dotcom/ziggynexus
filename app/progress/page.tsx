@@ -42,7 +42,7 @@ export default async function ProgressPage() {
           fontSize: '12px',
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
-          color: 'var(--gold)',
+          color: '#10b981',
           marginBottom: '8px',
           fontWeight: 500,
         }}>
@@ -85,7 +85,7 @@ export default async function ProgressPage() {
             <div style={{
               fontFamily: 'var(--font-playfair)',
               fontSize: '48px',
-              color: 'var(--gold)',
+              color: '#10b981',
               fontWeight: 400,
               lineHeight: 1,
             }}>
@@ -94,7 +94,7 @@ export default async function ProgressPage() {
           </div>
           <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
             <Stat label="Completed" value={String(completedCount)} color="var(--status-approved)" />
-            <Stat label="In Progress" value={String(inProgressCount)} color="var(--gold)" />
+            <Stat label="In Progress" value={String(inProgressCount)} color="#10b981" />
             <Stat label="Remaining" value={String(totalPhases - completedCount - inProgressCount)} color="var(--text-muted)" />
           </div>
         </div>
@@ -156,7 +156,7 @@ function ProgressBar({ pct, height = 8 }: { pct: number; height?: number }) {
       <div style={{
         height: '100%',
         width: `${Math.min(100, Math.max(0, pct))}%`,
-        background: 'linear-gradient(90deg, var(--gold-dim), var(--gold))',
+        background: 'linear-gradient(90deg, var(--gold-dim), #10b981)',
         borderRadius: `${height}px`,
         transition: 'width 0.6s ease',
       }} />
@@ -176,7 +176,7 @@ function Stat({ label, value, color }: { label: string; value: string; color: st
 function PhaseRow({ phase, isLast }: { phase: ProjectPhase; isLast: boolean }) {
   const statusConfig: Record<string, { icon: string; label: string; color: string }> = {
     complete:    { icon: '✓', label: 'Complete',    color: 'var(--status-approved)' },
-    in_progress: { icon: '●', label: 'In Progress', color: 'var(--gold)' },
+    in_progress: { icon: '●', label: 'In Progress', color: '#10b981' },
     in_review:   { icon: '↻', label: 'In Review',   color: 'var(--status-changes)' },
     pending:     { icon: '○', label: 'Pending',     color: 'var(--text-muted)' },
     on_hold:     { icon: '‖', label: 'On Hold',     color: 'var(--status-rejected)' },
@@ -270,7 +270,7 @@ function PhaseRow({ phase, isLast }: { phase: ProjectPhase; isLast: boolean }) {
           width: `${phasePct}%`,
           background: phasePct === 100
             ? 'var(--status-approved)'
-            : 'linear-gradient(90deg, var(--gold-dim), var(--gold))',
+            : 'linear-gradient(90deg, var(--gold-dim), #10b981)',
           borderRadius: '4px',
           transition: 'width 0.6s ease',
         }} />

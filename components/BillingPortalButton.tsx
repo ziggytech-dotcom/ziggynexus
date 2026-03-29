@@ -31,7 +31,7 @@ export default function BillingPortalButton() {
           background: 'transparent',
           border: '1px solid var(--border)',
           borderRadius: '8px',
-          color: 'var(--gold)',
+          color: '#10b981',
           fontSize: '13px',
           fontWeight: 500,
           cursor: loading ? 'not-allowed' : 'pointer',

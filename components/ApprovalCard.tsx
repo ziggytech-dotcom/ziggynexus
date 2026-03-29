@@ -230,7 +230,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
                 fontSize: '11px',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: 'var(--gold)',
+                color: '#10b981',
                 marginBottom: '4px',
                 fontWeight: 500,
               }}
@@ -273,7 +273,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
                 alignItems: 'center',
                 gap: '6px',
                 fontSize: '13px',
-                color: 'var(--gold)',
+                color: '#10b981',
                 textDecoration: 'none',
                 marginBottom: '16px',
                 padding: '6px 12px',

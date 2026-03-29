@@ -38,7 +38,7 @@ export default async function HelpPage() {
           fontSize: '12px',
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
-          color: 'var(--gold)',
+          color: '#10b981',
           marginBottom: '8px',
           fontWeight: 500,
         }}>
@@ -67,7 +67,7 @@ export default async function HelpPage() {
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
                 fontWeight: 600,
-                color: 'var(--gold)',
+                color: '#10b981',
                 marginBottom: '16px',
               }}>
                 {cat}

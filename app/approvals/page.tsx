@@ -36,12 +36,12 @@ export default async function ApprovalsPage() {
             fontSize: '12px',
             letterSpacing: '0.15em',
             textTransform: 'uppercase',
-            color: 'var(--gold)',
+            color: '#10b981',
             marginBottom: '8px',
             fontWeight: 500,
           }}
         >
-          NexusIQ™
+          ZiggyNexus™
         </div>
         <h1
           style={{
@@ -83,7 +83,7 @@ export default async function ApprovalsPage() {
                 background: 'var(--gold-glow)',
                 border: '1px solid var(--border)',
                 borderRadius: '20px',
-                color: 'var(--gold)',
+                color: '#10b981',
               }}
             >
               {pendingItems.length}

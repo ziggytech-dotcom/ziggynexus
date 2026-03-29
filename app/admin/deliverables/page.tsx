@@ -184,7 +184,7 @@ export default function AdminDeliverablesPage() {
                   type="checkbox"
                   checked={form.notifyClient}
                   onChange={(e) => update('notifyClient', e.target.checked)}
-                  style={{ width: '16px', height: '16px', accentColor: 'var(--gold)' }}
+                  style={{ width: '16px', height: '16px', accentColor: '#10b981' }}
                 />
                 <span style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
                   Email client when submitted
@@ -203,7 +203,7 @@ export default function AdminDeliverablesPage() {
                 disabled={submitting}
                 style={{
                   padding: '12px 28px',
-                  background: 'var(--gold)',
+                  background: '#10b981',
                   border: 'none',
                   borderRadius: '8px',
                   color: '#050505',

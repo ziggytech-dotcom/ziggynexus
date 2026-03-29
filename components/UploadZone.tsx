@@ -156,7 +156,7 @@ export default function UploadZone({ clientId }: UploadZoneProps) {
         onDragLeave={handleDragLeave}
         onClick={() => inputRef.current?.click()}
         style={{
-          border: `2px dashed ${dragging ? 'var(--gold)' : 'var(--border)'}`,
+          border: `2px dashed ${dragging ? '#10b981' : 'var(--border)'}`,
           borderRadius: '12px',
           padding: '48px 32px',
           textAlign: 'center',
@@ -221,7 +221,7 @@ export default function UploadZone({ clientId }: UploadZoneProps) {
                 <span
                   style={{
                     fontSize: '12px',
-                    color: u.error ? 'var(--status-rejected)' : 'var(--gold)',
+                    color: u.error ? 'var(--status-rejected)' : '#10b981',
                     whiteSpace: 'nowrap',
                     flexShrink: 0,
                   }}
@@ -246,7 +246,7 @@ export default function UploadZone({ clientId }: UploadZoneProps) {
                     style={{
                       height: '100%',
                       width: `${u.progress}%`,
-                      background: 'linear-gradient(90deg, var(--gold), var(--gold-light))',
+                      background: 'linear-gradient(90deg, #10b981, var(--gold-light))',
                       transition: 'width 0.3s ease',
                       borderRadius: '2px',
                     }}

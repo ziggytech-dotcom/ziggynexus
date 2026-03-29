@@ -1,4 +1,4 @@
-// Branded HTML email templates for NexusIQ
+// Branded HTML email templates for ZiggyNexus
 // All templates accept branding params so emails reflect the agency's look
 
 interface BrandingParams {

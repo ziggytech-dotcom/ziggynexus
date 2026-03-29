@@ -34,7 +34,7 @@ export default async function AssetDetailPage({
     return (
       <div style={{ padding: '40px', color: 'var(--text-secondary)' }}>
         Asset not found.{' '}
-        <Link href="/assets" style={{ color: 'var(--gold)' }}>
+        <Link href="/assets" style={{ color: '#10b981' }}>
           Back to library
         </Link>
       </div>
@@ -120,7 +120,7 @@ export default async function AssetDetailPage({
                   fontSize: '11px',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: 'var(--gold)',
+                  color: '#10b981',
                   marginBottom: '6px',
                   fontWeight: 500,
                 }}
@@ -221,13 +221,13 @@ export default async function AssetDetailPage({
                       padding: '12px 14px',
                       background: c.author_role === 'ztc_team' ? 'var(--gold-glow)' : 'var(--elevated)',
                       borderRadius: '8px',
-                      borderLeft: `3px solid ${c.author_role === 'ztc_team' ? 'var(--gold)' : 'var(--border-subtle)'}`,
+                      borderLeft: `3px solid ${c.author_role === 'ztc_team' ? '#10b981' : 'var(--border-subtle)'}`,
                     }}
                   >
                     <div
                       style={{
                         fontSize: '11px',
-                        color: c.author_role === 'ztc_team' ? 'var(--gold)' : 'var(--text-secondary)',
+                        color: c.author_role === 'ztc_team' ? '#10b981' : 'var(--text-secondary)',
                         fontWeight: 600,
                         marginBottom: '4px',
                         textTransform: 'uppercase',
@@ -299,7 +299,7 @@ export default async function AssetDetailPage({
                       style={{
                         fontSize: '13px',
                         fontWeight: 500,
-                        color: v.version === asset.version ? 'var(--gold)' : 'var(--text)',
+                        color: v.version === asset.version ? '#10b981' : 'var(--text)',
                       }}
                     >
                       v{v.version}
@@ -316,7 +316,7 @@ export default async function AssetDetailPage({
                         rel="noopener noreferrer"
                         style={{
                           fontSize: '12px',
-                          color: 'var(--gold)',
+                          color: '#10b981',
                           textDecoration: 'none',
                         }}
                       >

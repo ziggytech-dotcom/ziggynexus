@@ -79,7 +79,7 @@ export default function DomainsPage() {
         padding: '24px 28px',
         marginBottom: '36px',
       }}>
-        <h2 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--gold)', marginBottom: '14px' }}>
+        <h2 style={{ fontSize: '14px', fontWeight: 600, color: '#10b981', marginBottom: '14px' }}>
           CNAME Setup Instructions
         </h2>
         <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.6 }}>
@@ -100,7 +100,7 @@ export default function DomainsPage() {
           <span style={{ color: 'var(--text-muted)' }}>Name</span>
           <span style={{ color: 'var(--text-muted)' }}>Value</span>
 
-          <span style={{ color: 'var(--gold)', fontWeight: 600 }}>CNAME</span>
+          <span style={{ color: '#10b981', fontWeight: 600 }}>CNAME</span>
           <span style={{ color: 'var(--text)' }}>clients</span>
           <span style={{ color: 'var(--text)' }}>
             {typeof window !== 'undefined'
@@ -110,7 +110,7 @@ export default function DomainsPage() {
         </div>
         <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '12px' }}>
           DNS propagation typically takes a few minutes. Once set, enter the full subdomain
-          below (e.g. <code style={{ color: 'var(--gold)' }}>clients.acmecorp.com</code>).
+          below (e.g. <code style={{ color: '#10b981' }}>clients.acmecorp.com</code>).
         </p>
       </div>
 
@@ -165,7 +165,7 @@ export default function DomainsPage() {
                     disabled={saving === client.id}
                     style={{
                       padding: '9px 18px',
-                      background: 'var(--gold)',
+                      background: '#10b981',
                       border: 'none',
                       borderRadius: '8px',
                       color: '#050505',

@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'NexusIQ™ — ZiggyTech Creative',
+  title: 'ZiggyNexus — ZiggyTech Business Suite',
   description: 'Your private client portal. Everything being built for you — in one place.',
   icons: {
     icon: '/favicon.ico',
