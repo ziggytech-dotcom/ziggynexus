@@ -26,7 +26,7 @@ export default function PrivacyPage() {
             href="/"
             style={{
               fontSize: '13px',
-              color: 'rgba(201,169,110,0.65)',
+              color: 'rgba(16,185,129,0.65)',
               textDecoration: 'none',
               letterSpacing: '0.04em',
             }}
@@ -40,14 +40,14 @@ export default function PrivacyPage() {
             width: '100%',
             maxWidth: '760px',
             background: 'var(--surface)',
-            border: '1px solid rgba(201,169,110,0.12)',
+            border: '1px solid rgba(16,185,129,0.12)',
             borderRadius: '16px',
             padding: '48px 52px',
           }}
         >
           {/* Header */}
-          <div style={{ marginBottom: '40px', borderBottom: '1px solid rgba(201,169,110,0.10)', paddingBottom: '32px' }}>
-            <p style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '12px', fontWeight: 500 }}>
+          <div style={{ marginBottom: '40px', borderBottom: '1px solid rgba(16,185,129,0.10)', paddingBottom: '32px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#10b981', marginBottom: '12px', fontWeight: 500 }}>
               ZiggyTech Ventures LLC
             </p>
             <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: '36px', fontWeight: 400, color: 'var(--text)', marginBottom: '12px', lineHeight: 1.2 }}>
@@ -56,9 +56,9 @@ export default function PrivacyPage() {
             <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.40)', lineHeight: 1.5 }}>
               Effective Date: [Pending attorney review] &nbsp;·&nbsp; Last Updated: [Pending attorney review]
             </p>
-            <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(201,169,110,0.05)', borderRadius: '8px', border: '1px solid rgba(201,169,110,0.15)' }}>
+            <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(16,185,129,0.05)', borderRadius: '8px', border: '1px solid rgba(16,185,129,0.15)' }}>
               <p style={{ fontSize: '12px', color: 'rgba(245,240,232,0.50)', lineHeight: 1.6 }}>
-                <strong style={{ color: '#C9A96E' }}>Draft Notice:</strong> This document is a draft pending attorney review and has not been formally published.
+                <strong style={{ color: '#10b981' }}>Draft Notice:</strong> This document is a draft pending attorney review and has not been formally published.
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section style={{ marginBottom: '36px' }}>
-      <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#C9A96E', marginBottom: '14px', letterSpacing: '0.02em' }}>
+      <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#10b981', marginBottom: '14px', letterSpacing: '0.02em' }}>
         {title}
       </h2>
       {children}
@@ -144,7 +144,7 @@ function LegalContent() {
         </ul>
         <p style={prose}>
           We also use cookies and similar technologies to collect device/browser identifiers, session data, and performance diagnostics. See our{' '}
-          <Link href="/cookies" style={{ color: '#C9A96E', textDecoration: 'underline' }}>Cookie Policy</Link>{' '}
+          <Link href="/cookies" style={{ color: '#10b981', textDecoration: 'underline' }}>Cookie Policy</Link>{' '}
           for full details.
         </p>
       </Section>
@@ -166,7 +166,7 @@ function LegalContent() {
         <p style={prose}>California residents have the right to: know what personal information we collect; request deletion of personal information; request correction of inaccurate data; opt out of sale or sharing; limit use of sensitive personal information; and receive non-discriminatory treatment for exercising these rights.</p>
         <p style={prose}>
           To exercise your California privacy rights, contact us at{' '}
-          <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a>{' '}
+          <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a>{' '}
           (subject: &quot;California Privacy Rights Request&quot;). We will respond within 45 calendar days.
         </p>
       </Section>
@@ -174,7 +174,7 @@ function LegalContent() {
       <Section title="7. Nevada Privacy Rights (NV SB220)">
         <p style={prose}>
           We do not sell covered information of Nevada residents. To submit an opt-out request, contact{' '}
-          <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a>{' '}
+          <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a>{' '}
           (subject: &quot;Nevada SB220 Opt-Out Request&quot;).
         </p>
       </Section>
@@ -199,7 +199,7 @@ function LegalContent() {
         <p style={prose}>
           <strong style={{ color: 'var(--text)' }}>ZiggyTech Ventures LLC</strong><br />
           Privacy &amp; Legal Affairs<br />
-          Email: <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a><br />
+          Email: <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a><br />
           Las Vegas, Nevada
         </p>
       </Section>

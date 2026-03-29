@@ -49,7 +49,7 @@ export default function Footer() {
               transition: 'color 0.2s',
             }}
             onMouseOver={(e) =>
-              ((e.target as HTMLAnchorElement).style.color = '#C9A96E')
+              ((e.target as HTMLAnchorElement).style.color = '#10b981')
             }
             onMouseOut={(e) =>
               ((e.target as HTMLAnchorElement).style.color =

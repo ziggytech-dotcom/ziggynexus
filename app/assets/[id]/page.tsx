@@ -45,7 +45,7 @@ export default async function AssetDetailPage({
   // (component fires API call client-side on mount)
 
   const statusColors: Record<string, { color: string; bg: string }> = {
-    pending_review: { color: 'var(--status-pending)', bg: 'rgba(201,169,110,0.1)' },
+    pending_review: { color: 'var(--status-pending)', bg: 'rgba(16,185,129,0.1)' },
     approved: { color: 'var(--status-approved)', bg: 'rgba(74,222,128,0.1)' },
     changes_requested: { color: 'var(--status-changes)', bg: 'rgba(251,146,60,0.1)' },
     rejected: { color: 'var(--status-rejected)', bg: 'rgba(248,113,113,0.1)' },
@@ -178,7 +178,7 @@ export default async function AssetDetailPage({
                     gap: '6px',
                     marginTop: '16px',
                     padding: '10px 18px',
-                    background: 'linear-gradient(135deg, #C9A96E, #E0C48A)',
+                    background: 'linear-gradient(135deg, #10b981, #34d399)',
                     borderRadius: '8px',
                     color: '#050505',
                     fontSize: '13px',
@@ -358,7 +358,7 @@ export default async function AssetDetailPage({
                   display: 'block',
                   textAlign: 'center',
                   padding: '11px',
-                  background: 'linear-gradient(135deg, #C9A96E, #E0C48A)',
+                  background: 'linear-gradient(135deg, #10b981, #34d399)',
                   borderRadius: '8px',
                   color: '#050505',
                   fontSize: '13px',

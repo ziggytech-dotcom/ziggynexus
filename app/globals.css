@@ -9,8 +9,8 @@
   --border-subtle: rgba(255, 255, 255, 0.06);
 
   /* Gold */
-  --gold: #C9A96E;
-  --gold-light: #E0C48A;
+  --gold: #10b981;
+  --gold-light: #34d399;
   --gold-dim: rgba(201, 169, 110, 0.3);
   --gold-glow: rgba(201, 169, 110, 0.08);
 
@@ -20,7 +20,7 @@
   --text-muted: rgba(245, 240, 232, 0.35);
 
   /* Status colors */
-  --status-pending: #C9A96E;
+  --status-pending: #10b981;
   --status-approved: #4ADE80;
   --status-changes: #FB923C;
   --status-rejected: #F87171;

@@ -44,7 +44,7 @@ export default async function InvoicesPage() {
 
   const statusConfig: Record<string, { label: string; color: string; bg: string }> = {
     draft: { label: 'Draft', color: 'var(--text-muted)', bg: 'rgba(255,255,255,0.05)' },
-    open: { label: 'Due', color: 'var(--status-pending)', bg: 'rgba(201,169,110,0.1)' },
+    open: { label: 'Due', color: 'var(--status-pending)', bg: 'rgba(16,185,129,0.1)' },
     paid: { label: 'Paid', color: 'var(--status-approved)', bg: 'rgba(74,222,128,0.1)' },
     void: { label: 'Void', color: 'var(--text-muted)', bg: 'rgba(255,255,255,0.05)' },
     uncollectible: { label: 'Uncollectible', color: 'var(--status-rejected)', bg: 'rgba(248,113,113,0.1)' },

@@ -52,7 +52,7 @@ export default function LoginPage() {
           transform: 'translateX(-50%)',
           width: '600px',
           height: '400px',
-          background: 'radial-gradient(ellipse, rgba(201,169,110,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(16,185,129,0.06) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
@@ -76,7 +76,7 @@ export default function LoginPage() {
               textTransform: 'uppercase',
             }}
           >
-            ZiggyTech Creative
+            ZiggyNexus
           </div>
           <h1
             style={{
@@ -197,7 +197,7 @@ export default function LoginPage() {
                     padding: '14px',
                     background: loading
                       ? 'var(--gold-dim)'
-                      : 'linear-gradient(135deg, #C9A96E, #E0C48A)',
+                      : 'linear-gradient(135deg, #10b981, #34d399)',
                     border: 'none',
                     borderRadius: '8px',
                     color: '#050505',
@@ -266,7 +266,7 @@ export default function LoginPage() {
             lineHeight: 1.5,
           }}
         >
-          🔒 Your workspace is private. Only you and the ZiggyTech Creative team can access it.
+          🔒 Your workspace is private. Only you and the ZiggyNexus team can access it.
         </p>
 
         <p
@@ -279,11 +279,11 @@ export default function LoginPage() {
           }}
         >
           By accessing this portal you agree to our{' '}
-          <Link href="/privacy" style={{ color: 'rgba(201,169,110,0.55)', textDecoration: 'underline' }}>
+          <Link href="/privacy" style={{ color: 'rgba(16,185,129,0.55)', textDecoration: 'underline' }}>
             Privacy Policy
           </Link>{' '}
           and{' '}
-          <Link href="/terms" style={{ color: 'rgba(201,169,110,0.55)', textDecoration: 'underline' }}>
+          <Link href="/terms" style={{ color: 'rgba(16,185,129,0.55)', textDecoration: 'underline' }}>
             Terms of Service
           </Link>.
         </p>

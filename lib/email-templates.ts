@@ -33,7 +33,7 @@ interface WelcomeEmailParams {
 }
 
 function baseTemplate(branding: BrandingParams, bodyContent: string): string {
-  const color = branding.primaryColor || '#C9A96E'
+  const color = branding.primaryColor || '#10b981'
   const agencyName = branding.agencyName || 'Your Agency'
 
   return `
@@ -82,7 +82,7 @@ function baseTemplate(branding: BrandingParams, bodyContent: string): string {
 
 export function newDeliverableEmail(params: DeliverableEmailParams): string {
   const { branding, clientName, deliverableTitle, deliverableType, portalUrl, message } = params
-  const color = branding.primaryColor || '#C9A96E'
+  const color = branding.primaryColor || '#10b981'
 
   const body = `
     <h1 style="font-size:28px;font-weight:400;color:#F5F0E8;margin:0 0 8px 0;line-height:1.2;">
@@ -111,7 +111,7 @@ export function newDeliverableEmail(params: DeliverableEmailParams): string {
 
 export function approvalStatusEmail(params: DeliverableEmailParams & { newStatus: string }): string {
   const { branding, clientName, deliverableTitle, newStatus, portalUrl } = params
-  const color = branding.primaryColor || '#C9A96E'
+  const color = branding.primaryColor || '#10b981'
 
   const statusMap: Record<string, { label: string; color: string; message: string }> = {
     approved: { label: 'Approved', color: '#4ADE80', message: 'Your approval has been received. We\'ll move forward.' },
@@ -144,7 +144,7 @@ export function approvalStatusEmail(params: DeliverableEmailParams & { newStatus
 
 export function invoiceReminderEmail(params: InvoiceReminderParams): string {
   const { branding, clientName, invoiceNumber, amountDue, dueDate, daysOverdue, portalUrl } = params
-  const color = branding.primaryColor || '#C9A96E'
+  const color = branding.primaryColor || '#10b981'
 
   const urgency = daysOverdue >= 14
     ? 'This invoice is significantly overdue. Please arrange payment at your earliest convenience.'
@@ -192,7 +192,7 @@ interface WorkspaceActivityParams {
 
 export function workspaceActivityEmail(params: WorkspaceActivityParams): string {
   const { branding, clientName, eventType, eventDescription, portalAdminUrl, occurredAt } = params
-  const color = branding.primaryColor || '#C9A96E'
+  const color = branding.primaryColor || '#10b981'
 
   const eventIcons: Record<string, string> = {
     file_viewed: '📂',
@@ -234,7 +234,7 @@ export function workspaceActivityEmail(params: WorkspaceActivityParams): string 
 
 export function welcomeEmail(params: WelcomeEmailParams): string {
   const { branding, clientName, portalUrl } = params
-  const color = branding.primaryColor || '#C9A96E'
+  const color = branding.primaryColor || '#10b981'
   const agencyName = branding.agencyName || 'Your Agency'
 
   const body = `

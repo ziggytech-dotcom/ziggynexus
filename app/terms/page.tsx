@@ -23,7 +23,7 @@ export default function TermsPage() {
         <div style={{ width: '100%', maxWidth: '760px', marginBottom: '32px' }}>
           <Link
             href="/"
-            style={{ fontSize: '13px', color: 'rgba(201,169,110,0.65)', textDecoration: 'none', letterSpacing: '0.04em' }}
+            style={{ fontSize: '13px', color: 'rgba(16,185,129,0.65)', textDecoration: 'none', letterSpacing: '0.04em' }}
           >
             ← Back to portal
           </Link>
@@ -34,13 +34,13 @@ export default function TermsPage() {
             width: '100%',
             maxWidth: '760px',
             background: 'var(--surface)',
-            border: '1px solid rgba(201,169,110,0.12)',
+            border: '1px solid rgba(16,185,129,0.12)',
             borderRadius: '16px',
             padding: '48px 52px',
           }}
         >
-          <div style={{ marginBottom: '40px', borderBottom: '1px solid rgba(201,169,110,0.10)', paddingBottom: '32px' }}>
-            <p style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '12px', fontWeight: 500 }}>
+          <div style={{ marginBottom: '40px', borderBottom: '1px solid rgba(16,185,129,0.10)', paddingBottom: '32px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#10b981', marginBottom: '12px', fontWeight: 500 }}>
               ZiggyTech Ventures LLC
             </p>
             <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: '36px', fontWeight: 400, color: 'var(--text)', marginBottom: '12px', lineHeight: 1.2 }}>
@@ -49,9 +49,9 @@ export default function TermsPage() {
             <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.40)', lineHeight: 1.5 }}>
               Effective Date: [Pending attorney review] &nbsp;·&nbsp; Last Updated: [Pending attorney review]
             </p>
-            <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(201,169,110,0.05)', borderRadius: '8px', border: '1px solid rgba(201,169,110,0.15)' }}>
+            <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(16,185,129,0.05)', borderRadius: '8px', border: '1px solid rgba(16,185,129,0.15)' }}>
               <p style={{ fontSize: '12px', color: 'rgba(245,240,232,0.50)', lineHeight: 1.6 }}>
-                <strong style={{ color: '#C9A96E' }}>Draft Notice:</strong> This document is a draft pending attorney review and has not been formally published.
+                <strong style={{ color: '#10b981' }}>Draft Notice:</strong> This document is a draft pending attorney review and has not been formally published.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function TermsPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section style={{ marginBottom: '36px' }}>
-      <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#C9A96E', marginBottom: '14px', letterSpacing: '0.02em' }}>
+      <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#10b981', marginBottom: '14px', letterSpacing: '0.02em' }}>
         {title}
       </h2>
       {children}
@@ -115,7 +115,7 @@ function TermsContent() {
 
       <Section title="3. Account Registration and Eligibility">
         <p style={prose}>You must be at least 18 years of age and have the legal capacity to enter into contracts. Our Services are intended for business use only — not personal, family, or household use.</p>
-        <p style={prose}>You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account. Notify us immediately at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a> if you suspect unauthorized access.</p>
+        <p style={prose}>You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account. Notify us immediately at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a> if you suspect unauthorized access.</p>
       </Section>
 
       <Section title="4. Subscription, Billing & Refunds">
@@ -152,12 +152,12 @@ function TermsContent() {
 
       <Section title="6. Data Processing">
         <p style={prose}>To the extent you upload personal data of third parties to our Services, ZiggyTech acts as a <strong style={{ color: 'var(--text)' }}>data processor</strong> processing such data on your behalf under our Data Processing Agreement (DPA). You, as the data controller, are responsible for ensuring your collection and provision of such data complies with all applicable privacy laws.</p>
-        <p style={prose}>Contact <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a> to obtain or execute a standalone DPA.</p>
+        <p style={prose}>Contact <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a> to obtain or execute a standalone DPA.</p>
       </Section>
 
       <Section title="7. ESIGN Act Consent">
         <p style={prose}>By accepting these Terms, you consent to receive electronic records and to use electronic signatures in connection with your account and the Services, in accordance with the ESIGN Act (15 U.S.C. § 7001 et seq.) and Nevada&apos;s UETA (NRS Chapter 719). Electronic signatures have the same legal effect as handwritten signatures.</p>
-        <p style={prose}>You may withdraw consent to electronic records by notifying us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a>. Withdrawal may result in limited access to certain Services.</p>
+        <p style={prose}>You may withdraw consent to electronic records by notifying us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a>. Withdrawal may result in limited access to certain Services.</p>
       </Section>
 
       <Section title="8. ZiggyPayroll — Important Disclaimers">
@@ -185,14 +185,14 @@ function TermsContent() {
         <p style={prose}>
           <strong style={{ color: 'var(--text)' }}>ZiggyTech Ventures LLC</strong><br />
           Legal &amp; Compliance<br />
-          Email: <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a><br />
+          Email: <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a><br />
           Las Vegas, Nevada
         </p>
         <p style={prose}>
           Also see our{' '}
-          <Link href="/privacy" style={{ color: '#C9A96E', textDecoration: 'underline' }}>Privacy Policy</Link>
+          <Link href="/privacy" style={{ color: '#10b981', textDecoration: 'underline' }}>Privacy Policy</Link>
           {' '}and{' '}
-          <Link href="/cookies" style={{ color: '#C9A96E', textDecoration: 'underline' }}>Cookie Policy</Link>.
+          <Link href="/cookies" style={{ color: '#10b981', textDecoration: 'underline' }}>Cookie Policy</Link>.
         </p>
       </Section>
     </div>

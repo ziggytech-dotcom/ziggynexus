@@ -23,7 +23,7 @@ export default function CookiesPage() {
         <div style={{ width: '100%', maxWidth: '760px', marginBottom: '32px' }}>
           <Link
             href="/"
-            style={{ fontSize: '13px', color: 'rgba(201,169,110,0.65)', textDecoration: 'none', letterSpacing: '0.04em' }}
+            style={{ fontSize: '13px', color: 'rgba(16,185,129,0.65)', textDecoration: 'none', letterSpacing: '0.04em' }}
           >
             ← Back to portal
           </Link>
@@ -34,13 +34,13 @@ export default function CookiesPage() {
             width: '100%',
             maxWidth: '760px',
             background: 'var(--surface)',
-            border: '1px solid rgba(201,169,110,0.12)',
+            border: '1px solid rgba(16,185,129,0.12)',
             borderRadius: '16px',
             padding: '48px 52px',
           }}
         >
-          <div style={{ marginBottom: '40px', borderBottom: '1px solid rgba(201,169,110,0.10)', paddingBottom: '32px' }}>
-            <p style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#C9A96E', marginBottom: '12px', fontWeight: 500 }}>
+          <div style={{ marginBottom: '40px', borderBottom: '1px solid rgba(16,185,129,0.10)', paddingBottom: '32px' }}>
+            <p style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#10b981', marginBottom: '12px', fontWeight: 500 }}>
               ZiggyTech Ventures LLC
             </p>
             <h1 style={{ fontFamily: 'var(--font-playfair)', fontSize: '36px', fontWeight: 400, color: 'var(--text)', marginBottom: '12px', lineHeight: 1.2 }}>
@@ -49,9 +49,9 @@ export default function CookiesPage() {
             <p style={{ fontSize: '13px', color: 'rgba(245,240,232,0.40)', lineHeight: 1.5 }}>
               Effective Date: [Pending attorney review] &nbsp;·&nbsp; Last Updated: [Pending attorney review]
             </p>
-            <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(201,169,110,0.05)', borderRadius: '8px', border: '1px solid rgba(201,169,110,0.15)' }}>
+            <div style={{ marginTop: '16px', padding: '12px 16px', background: 'rgba(16,185,129,0.05)', borderRadius: '8px', border: '1px solid rgba(16,185,129,0.15)' }}>
               <p style={{ fontSize: '12px', color: 'rgba(245,240,232,0.50)', lineHeight: 1.6 }}>
-                <strong style={{ color: '#C9A96E' }}>Draft Notice:</strong> This document is a draft pending attorney review and has not been formally published.
+                <strong style={{ color: '#10b981' }}>Draft Notice:</strong> This document is a draft pending attorney review and has not been formally published.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function CookiesPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section style={{ marginBottom: '36px' }}>
-      <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#C9A96E', marginBottom: '14px', letterSpacing: '0.02em' }}>
+      <h2 style={{ fontSize: '18px', fontWeight: 600, color: '#10b981', marginBottom: '14px', letterSpacing: '0.02em' }}>
         {title}
       </h2>
       {children}
@@ -96,7 +96,7 @@ function CookieTable({ rows }: { rows: [string, string, string][] }) {
         <thead>
           <tr>
             {['Cookie / Category', 'Purpose', 'Duration'].map((h) => (
-              <th key={h} style={{ padding: '10px 14px', textAlign: 'left', color: '#C9A96E', fontWeight: 600, borderBottom: '1px solid rgba(201,169,110,0.15)', letterSpacing: '0.04em', fontSize: '12px', textTransform: 'uppercase' }}>
+              <th key={h} style={{ padding: '10px 14px', textAlign: 'left', color: '#10b981', fontWeight: 600, borderBottom: '1px solid rgba(16,185,129,0.15)', letterSpacing: '0.04em', fontSize: '12px', textTransform: 'uppercase' }}>
                 {h}
               </th>
             ))}
@@ -172,17 +172,17 @@ function CookieContent() {
             ['Network Advertising Initiative', 'https://optout.networkadvertising.org'],
           ].map(([label, href]) => (
             <li key={label} style={li}>
-              <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: '#C9A96E' }}>{label}</a>
+              <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: '#10b981' }}>{label}</a>
             </li>
           ))}
         </ul>
         <p style={prose}>
-          <strong style={{ color: 'var(--text)' }}>California Residents (CCPA/CPRA):</strong> To opt out of sharing personal information for cross-context behavioral advertising, email us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a> (subject: &quot;CCPA Opt-Out — Cookies&quot;). Requests will be processed within 15 business days.
+          <strong style={{ color: 'var(--text)' }}>California Residents (CCPA/CPRA):</strong> To opt out of sharing personal information for cross-context behavioral advertising, email us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a> (subject: &quot;CCPA Opt-Out — Cookies&quot;). Requests will be processed within 15 business days.
         </p>
       </Section>
 
       <Section title="7. Data Retention">
-        <p style={prose}>Cookie lifespans are listed in the tables above. Server-side data collected through cookies is retained in accordance with our <Link href="/privacy" style={{ color: '#C9A96E', textDecoration: 'underline' }}>Privacy Policy</Link> — generally 12 months for usage and log data.</p>
+        <p style={prose}>Cookie lifespans are listed in the tables above. Server-side data collected through cookies is retained in accordance with our <Link href="/privacy" style={{ color: '#10b981', textDecoration: 'underline' }}>Privacy Policy</Link> — generally 12 months for usage and log data.</p>
       </Section>
 
       <Section title="8. Changes to This Policy">
@@ -193,14 +193,14 @@ function CookieContent() {
         <p style={prose}>
           <strong style={{ color: 'var(--text)' }}>ZiggyTech Ventures LLC</strong><br />
           Privacy &amp; Legal Affairs<br />
-          Email: <a href="mailto:legal@ziggytechventures.com" style={{ color: '#C9A96E' }}>legal@ziggytechventures.com</a><br />
+          Email: <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a><br />
           Las Vegas, Nevada
         </p>
         <p style={prose}>
           Also see our{' '}
-          <Link href="/privacy" style={{ color: '#C9A96E', textDecoration: 'underline' }}>Privacy Policy</Link>
+          <Link href="/privacy" style={{ color: '#10b981', textDecoration: 'underline' }}>Privacy Policy</Link>
           {' '}and{' '}
-          <Link href="/terms" style={{ color: '#C9A96E', textDecoration: 'underline' }}>Terms of Service</Link>.
+          <Link href="/terms" style={{ color: '#10b981', textDecoration: 'underline' }}>Terms of Service</Link>.
         </p>
       </Section>
     </div>

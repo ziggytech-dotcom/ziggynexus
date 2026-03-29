@@ -416,7 +416,7 @@ function PhaseRow({
 
 function StatusBadge({ status }: { status: string }) {
   const map: Record<string, { label: string; color: string; bg: string }> = {
-    pending_review: { label: 'Needs Review', color: 'var(--status-pending)', bg: 'rgba(201,169,110,0.1)' },
+    pending_review: { label: 'Needs Review', color: 'var(--status-pending)', bg: 'rgba(16,185,129,0.1)' },
     approved: { label: 'Approved', color: 'var(--status-approved)', bg: 'rgba(74,222,128,0.1)' },
     changes_requested: { label: 'Changes', color: 'var(--status-changes)', bg: 'rgba(251,146,60,0.1)' },
     rejected: { label: 'Rejected', color: 'var(--status-rejected)', bg: 'rgba(248,113,113,0.1)' },

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/Footer'
 import CookieBanner from '@/components/CookieBanner'
@@ -7,12 +7,6 @@ import CookieBanner from '@/components/CookieBanner'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'swap',
-})
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
   display: 'swap',
 })
 
@@ -30,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable}`}>
       <body style={{ fontFamily: 'var(--font-inter), sans-serif', display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <div style={{ flex: 1 }}>{children}</div>
         <Footer />

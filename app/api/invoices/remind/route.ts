@@ -60,8 +60,8 @@ export async function POST(request: Request) {
     const daysOverdue = Math.floor((today.getTime() - dueDate.getTime()) / (1000 * 60 * 60 * 24))
 
     const branding = {
-      agencyName: client.brand_name ?? 'ZiggyTech Creative',
-      primaryColor: client.brand_primary_color ?? '#C9A96E',
+      agencyName: client.brand_name ?? 'ZiggyNexus',
+      primaryColor: client.brand_primary_color ?? '#10b981',
       logoUrl: client.brand_logo_url,
     }
 

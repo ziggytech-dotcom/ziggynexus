@@ -27,7 +27,7 @@ export default function SideNav({ branding }: SideNavProps) {
   const router = useRouter()
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  const agencyName = branding?.brand_name ?? 'ZiggyTech Creative'
+  const agencyName = branding?.brand_name ?? 'ZiggyNexus'
 
   async function handleSignOut() {
     const supabase = createClient()

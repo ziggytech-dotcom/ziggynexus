@@ -63,8 +63,8 @@ export async function POST(request: Request) {
   // Notify workspace via email (fire-and-forget; do not fail the request if email fails)
   if (WORKSPACE_EMAIL) {
     const branding = {
-      agencyName: client.brand_name ?? 'ZiggyTech Creative',
-      primaryColor: client.brand_primary_color ?? '#C9A96E',
+      agencyName: client.brand_name ?? 'ZiggyNexus',
+      primaryColor: client.brand_primary_color ?? '#10b981',
       logoUrl: client.brand_logo_url,
     }
     const descFn = EVENT_DESCRIPTIONS[eventType]

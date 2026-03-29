@@ -133,7 +133,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
     approved: { label: 'Approved', color: 'var(--status-approved)', bg: 'rgba(74,222,128,0.08)' },
     changes_requested: { label: 'Changes Requested', color: 'var(--status-changes)', bg: 'rgba(251,146,60,0.08)' },
     rejected: { label: 'Rejected', color: 'var(--status-rejected)', bg: 'rgba(248,113,113,0.08)' },
-    pending_review: { label: 'Pending Review', color: 'var(--status-pending)', bg: 'rgba(201,169,110,0.08)' },
+    pending_review: { label: 'Pending Review', color: 'var(--status-pending)', bg: 'rgba(16,185,129,0.08)' },
   }
   const sc = statusConfig[localStatus] ?? statusConfig.pending_review
 
@@ -419,7 +419,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
               style={{
                 flex: 1,
                 padding: '12px',
-                background: loading === 'changes' ? 'var(--gold-dim)' : 'linear-gradient(135deg, #C9A96E, #E0C48A)',
+                background: loading === 'changes' ? 'var(--gold-dim)' : 'linear-gradient(135deg, #10b981, #34d399)',
                 border: 'none',
                 borderRadius: '8px',
                 color: '#050505',
@@ -464,7 +464,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
           </h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '14px', marginBottom: '20px', lineHeight: 1.5 }}>
             This will mark <strong style={{ color: 'var(--text)' }}>{deliverable.title}</strong> as rejected
-            and notify the ZiggyTech Creative team. Please explain why so we can make it right.
+            and notify the ZiggyNexus team. Please explain why so we can make it right.
           </p>
           <textarea
             value={rejectReason}

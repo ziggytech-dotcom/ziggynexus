@@ -62,7 +62,7 @@ export default function CookieBanner() {
         We use cookies to keep you signed in and improve our services.{' '}
         <Link
           href="/cookies"
-          style={{ color: '#C9A96E', textDecoration: 'underline' }}
+          style={{ color: '#10b981', textDecoration: 'underline' }}
         >
           Cookie Policy
         </Link>
@@ -72,7 +72,7 @@ export default function CookieBanner() {
         onClick={dismiss}
         style={{
           padding: '8px 20px',
-          background: 'linear-gradient(135deg, #C9A96E, #E0C48A)',
+          background: 'linear-gradient(135deg, #10b981, #34d399)',
           border: 'none',
           borderRadius: '6px',
           color: '#050505',

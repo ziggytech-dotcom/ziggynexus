@@ -108,7 +108,7 @@ export default function OnboardingPage() {
           transform: 'translateX(-50%)',
           width: '700px',
           height: '400px',
-          background: 'radial-gradient(ellipse, rgba(201,169,110,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(16,185,129,0.05) 0%, transparent 70%)',
           pointerEvents: 'none',
         }}
       />
