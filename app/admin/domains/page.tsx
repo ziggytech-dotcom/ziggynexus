@@ -14,6 +14,7 @@ export default function DomainsPage() {
   const [clients, setClients] = useState<ClientDomain[]>([])
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState<string | null>(null)
+  const [verifying, setVerifying] = useState<string | null>(null)
   const [domains, setDomains] = useState<Record<string, string>>({})
   const [messages, setMessages] = useState<Record<string, { type: 'success' | 'error'; text: string }>>({})
 
@@ -51,6 +52,37 @@ export default function DomainsPage() {
       setMessages((prev) => ({ ...prev, [clientId]: { type: 'error', text: data.error ?? 'Failed to save.' } }))
     }
     setSaving(null)
+  }
+
+  async function verifyDomain(clientId: string) {
+    setVerifying(clientId)
+    setMessages((prev) => ({ ...prev, [clientId]: { type: 'success', text: '' } }))
+
+    const res = await fetch('/api/admin/domains/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ clientId }),
+    })
+    const data = await res.json()
+    setVerifying(null)
+
+    if (res.ok) {
+      if (data.verified) {
+        setMessages((prev) => ({ ...prev, [clientId]: { type: 'success', text: 'Domain verified! CNAME resolves correctly.' } }))
+        setClients((prev) => prev.map((c) => c.id === clientId ? { ...c, custom_domain_verified: true } : c))
+      } else {
+        setMessages((prev) => ({
+          ...prev,
+          [clientId]: {
+            type: 'error',
+            text: `CNAME not yet active. Found: "${data.resolvedCname || 'nothing'}" — expected: "${data.expected}"`,
+          },
+        }))
+        setClients((prev) => prev.map((c) => c.id === clientId ? { ...c, custom_domain_verified: false } : c))
+      }
+    } else {
+      setMessages((prev) => ({ ...prev, [clientId]: { type: 'error', text: data.error ?? 'Verification failed.' } }))
+    }
   }
 
   return (
@@ -142,7 +174,7 @@ export default function DomainsPage() {
                   <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{client.email}</div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flex: 1, maxWidth: '480px' }}>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flex: 1, maxWidth: '560px', flexWrap: 'wrap' }}>
                   <input
                     type="text"
                     placeholder="clients.theirbusiness.com"
@@ -150,6 +182,7 @@ export default function DomainsPage() {
                     onChange={(e) => setDomains((prev) => ({ ...prev, [client.id]: e.target.value }))}
                     style={{
                       flex: 1,
+                      minWidth: '180px',
                       padding: '9px 14px',
                       background: 'var(--elevated)',
                       border: '1px solid var(--border-subtle)',
@@ -177,6 +210,33 @@ export default function DomainsPage() {
                   >
                     {saving === client.id ? 'Saving…' : 'Save'}
                   </button>
+                  {client.custom_domain && (
+                    <button
+                      onClick={() => verifyDomain(client.id)}
+                      disabled={verifying === client.id}
+                      style={{
+                        padding: '9px 14px',
+                        background: 'transparent',
+                        border: `1px solid ${client.custom_domain_verified ? '#4ADE80' : 'var(--border-subtle)'}`,
+                        borderRadius: '8px',
+                        color: client.custom_domain_verified ? '#4ADE80' : 'var(--text-secondary)',
+                        fontSize: '12px',
+                        cursor: verifying === client.id ? 'wait' : 'pointer',
+                        whiteSpace: 'nowrap',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                      }}
+                    >
+                      {verifying === client.id ? (
+                        '⟳ Checking…'
+                      ) : client.custom_domain_verified ? (
+                        '✓ Verified'
+                      ) : (
+                        '⟳ Check DNS'
+                      )}
+                    </button>
+                  )}
                 </div>
               </div>
 

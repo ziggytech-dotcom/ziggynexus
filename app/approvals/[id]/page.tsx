@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import ApprovalCard from '@/components/ApprovalCard'
+import CommentThread from '@/components/CommentThread'
 import Link from 'next/link'
 import type { ApprovalComment, DeliverableVersion } from '@/lib/types'
 import ActivityTracker from '@/components/ActivityTracker'
@@ -142,66 +143,11 @@ export default async function ApprovalDetailPage({
             </div>
           )}
 
-          {/* Comments thread */}
-          {comments && comments.length > 0 && (
-            <div
-              style={{
-                background: 'var(--surface)',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: '12px',
-                padding: '20px',
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  color: 'var(--text)',
-                  marginBottom: '14px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                }}
-              >
-                Feedback Thread
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {comments.map((c: ApprovalComment) => (
-                  <div
-                    key={c.id}
-                    style={{
-                      padding: '10px 12px',
-                      background: c.author_role === 'ztc_team'
-                        ? 'var(--gold-glow)'
-                        : 'var(--elevated)',
-                      borderRadius: '7px',
-                      borderLeft: `3px solid ${c.author_role === 'ztc_team' ? '#10b981' : 'var(--border-subtle)'}`,
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: '11px',
-                        color: c.author_role === 'ztc_team' ? '#10b981' : 'var(--text-secondary)',
-                        fontWeight: 600,
-                        marginBottom: '4px',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.06em',
-                      }}
-                    >
-                      {c.author}
-                    </div>
-                    <div style={{ fontSize: '13px', color: 'var(--text)', lineHeight: 1.5 }}>
-                      {c.comment}
-                    </div>
-                    <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '6px' }}>
-                      {new Date(c.created_at).toLocaleDateString('en-US', {
-                        month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
-                      })}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* Comments thread — always shown, with reply form */}
+          <CommentThread
+            deliverableId={id}
+            initialComments={(comments ?? []) as ApprovalComment[]}
+          />
         </div>
       </div>
     </div>

@@ -16,13 +16,15 @@ const navItems = [
   { href: '/invoices', icon: '📄', label: 'Invoices' },
   { href: '/calendar', icon: '◷', label: 'Calendar' },
   { href: '/help', icon: '?', label: 'Help & FAQ' },
+  { href: '/settings', icon: '⚙', label: 'Settings' },
 ]
 
 interface SideNavProps {
   branding?: ClientBranding | null
+  hidePoweredBy?: boolean
 }
 
-export default function SideNav({ branding }: SideNavProps) {
+export default function SideNav({ branding, hidePoweredBy }: SideNavProps) {
   const pathname = usePathname()
   const router = useRouter()
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -120,6 +122,20 @@ export default function SideNav({ branding }: SideNavProps) {
           )
         })}
       </div>
+
+      {/* Powered by ZiggyNexus */}
+      {!hidePoweredBy && (
+        <div style={{ textAlign: 'center', marginBottom: '8px' }}>
+          <a
+            href="https://ziggynexus.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: '10px', color: 'var(--text-muted)', textDecoration: 'none', letterSpacing: '0.05em' }}
+          >
+            Powered by ZiggyNexus
+          </a>
+        </div>
+      )}
 
       {/* Bottom: sign out */}
       <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '16px' }}>

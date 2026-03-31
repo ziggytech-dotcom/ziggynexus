@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import SideNav from '@/components/SideNav'
+import BottomNav from '@/components/BottomNav'
 import type { ClientBranding } from '@/lib/types'
 
 // Shared server-side layout used by all portal sections.
@@ -17,16 +18,18 @@ export default async function PortalLayout({
     brand_primary_color: null,
     brand_name: null,
   }
+  let hidePoweredBy = false
 
   if (user?.email) {
     const { data: client } = await supabase
       .from('clients')
-      .select('brand_logo_url, brand_primary_color, brand_name')
+      .select('brand_logo_url, brand_primary_color, brand_name, hide_powered_by')
       .eq('email', user.email)
       .single()
 
     if (client) {
       branding = client as ClientBranding
+      hidePoweredBy = client.hide_powered_by ?? false
     }
   }
 
@@ -54,11 +57,12 @@ export default async function PortalLayout({
         <style dangerouslySetInnerHTML={{ __html: brandCss }} />
       )}
       <div className="portal-themed portal-layout">
-        <SideNav branding={branding} />
-        <main className="portal-main">
+        <SideNav branding={branding} hidePoweredBy={hidePoweredBy} />
+        <main className="portal-main portal-main-padded">
           {children}
         </main>
       </div>
+      <BottomNav />
     </>
   )
 }

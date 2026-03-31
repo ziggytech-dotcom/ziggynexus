@@ -2,6 +2,8 @@ import { createClient } from '@/lib/supabase/server'
 import { TYPE_LABELS } from '@/lib/types'
 import type { ProjectPhase } from '@/lib/types'
 import { redirect } from 'next/navigation'
+import OnboardingTourModal from '@/components/OnboardingTourModal'
+import GettingStartedChecklist from '@/components/GettingStartedChecklist'
 
 export default async function DashboardPage() {
   const supabase = await createClient()
@@ -51,9 +53,28 @@ export default async function DashboardPage() {
     .limit(5)
 
   const clientName = client?.name ?? user?.email?.split('@')[0] ?? 'Client'
+  const tourCompleted = client?.tour_completed ?? false
+  const profileComplete = !!(client?.company || client?.phone)
+  const hasApprovedOrReviewedDeliverable = (recent ?? []).some(
+    (d: { status: string }) => d.status !== 'pending_review'
+  )
 
   return (
     <div className="fade-in">
+      {/* Onboarding tour — shown once after first login */}
+      {!tourCompleted && user?.email && (
+        <OnboardingTourModal clientEmail={user.email} />
+      )}
+
+      {/* Getting started checklist — shown until all steps done */}
+      {!tourCompleted && (
+        <GettingStartedChecklist
+          loggedIn={true}
+          profileComplete={profileComplete}
+          hasDeliverables={hasApprovedOrReviewedDeliverable}
+        />
+      )}
+
       {/* Header */}
       <div style={{ marginBottom: '40px' }}>
         <div

@@ -210,3 +210,62 @@ body {
     padding: 16px 12px;
   }
 }
+
+/* ============================================================
+   BOTTOM NAV — mobile only
+   ============================================================ */
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border-subtle);
+    z-index: 200;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  /* Extra bottom padding so content doesn't hide under bottom nav */
+  .portal-main-padded {
+    padding-bottom: 80px !important;
+  }
+}
+
+/* ============================================================
+   IPAD — sidebar stays, tighter spacing
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portal-main {
+    padding: 28px 28px;
+  }
+
+  .grid-detail {
+    grid-template-columns: 1fr 280px;
+    gap: 20px;
+  }
+
+  .grid-asset-detail {
+    grid-template-columns: 1fr 260px;
+    gap: 20px;
+  }
+}
+
+/* ============================================================
+   MOBILE APPROVAL CARD — tap-friendly button row
+   ============================================================ */
+@media (max-width: 768px) {
+  .approval-card-actions {
+    flex-direction: column !important;
+  }
+
+  .approval-card-actions button,
+  .approval-card-actions a {
+    width: 100% !important;
+  }
+}

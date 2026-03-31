@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 
 interface OnboardingData {
@@ -48,14 +47,6 @@ export default function OnboardingPage() {
   async function handleComplete() {
     setLoading(true)
     setError(null)
-    const supabase = createClient()
-    const { data: { user } } = await supabase.auth.getUser()
-
-    if (!user) {
-      setError('Session expired. Please sign in again.')
-      setLoading(false)
-      return
-    }
 
     const notes = [
       data.goals && `Goals: ${data.goals}`,
@@ -65,18 +56,19 @@ export default function OnboardingPage() {
       data.notes && `Notes: ${data.notes}`,
     ].filter(Boolean).join('\n')
 
-    const { error: updateError } = await supabase
-      .from('clients')
-      .update({
+    const res = await fetch('/api/onboarding/complete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
         company: data.company || undefined,
         phone: data.phone || undefined,
-        onboarding_completed: true,
         notes: notes || undefined,
-      })
-      .eq('email', user.email)
+      }),
+    })
+    const result = await res.json()
 
-    if (updateError) {
-      setError(updateError.message)
+    if (!res.ok) {
+      setError(result.error ?? 'Something went wrong.')
       setLoading(false)
       return
     }
