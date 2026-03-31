@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { resend, FROM_EMAIL } from '@/lib/resend'
 import { welcomeEmail } from '@/lib/email-templates'
+import { upsertSharedContact } from '@/lib/sharedContacts'
 
 export async function POST(request: Request) {
   const supabase = await createClient()
@@ -26,12 +27,27 @@ export async function POST(request: Request) {
 
   if (updateErr) return NextResponse.json({ error: updateErr.message }, { status: 500 })
 
-  // Send branded welcome email
+  // Fetch client with branding for welcome email + shared contacts sync
   const { data: client } = await supabase
     .from('clients')
-    .select('name, brand_name, brand_primary_color, brand_logo_url')
+    .select('id, name, email, phone, company, brand_name, brand_primary_color, brand_logo_url')
     .eq('email', user.email)
     .single()
+
+  // Sync to shared_contacts (best-effort, fire-and-forget)
+  if (client) {
+    const nameParts = (client.name || '').trim().split(' ')
+    void upsertSharedContact(
+      {
+        first_name: nameParts[0] || null,
+        last_name: nameParts.slice(1).join(' ') || null,
+        email: (client.email as string | null) ?? user.email,
+        phone: (client.phone as string | null) ?? body.phone ?? null,
+        company: (client.company as string | null) ?? body.company ?? null,
+      },
+      client.id as string,
+    )
+  }
 
   if (client && resend) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://app.ziggynexus.com'

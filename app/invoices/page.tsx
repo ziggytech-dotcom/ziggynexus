@@ -2,6 +2,20 @@ import { createClient } from '@/lib/supabase/server'
 import type { Invoice } from '@/lib/types'
 import BillingPortalButton from '@/components/BillingPortalButton'
 
+interface ZiggyInvoiceRecord {
+  id: string
+  invoice_number: string | null
+  status: string
+  total: number
+  paid_amount: number | null
+  currency: string
+  due_date: string | null
+  created_at: string
+  paid_at: string | null
+  balance_due: number
+  payment_url: string
+}
+
 export default async function InvoicesPage() {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -11,6 +25,28 @@ export default async function InvoicesPage() {
     .select('id, name')
     .eq('email', user?.email)
     .single()
+
+  // Fetch ZiggyInvoice invoices for this client (best-effort)
+  let ziggyInvoices: ZiggyInvoiceRecord[] = []
+  const ziggyInvoiceUrl = process.env.ZIGGYINVOICE_URL
+  const ziggyNexusApiKey = process.env.ZIGGY_NEXUS_API_KEY
+  if (ziggyInvoiceUrl && user?.email) {
+    try {
+      const res = await fetch(
+        `${ziggyInvoiceUrl}/api/invoices/for-client?email=${encodeURIComponent(user.email)}`,
+        {
+          headers: ziggyNexusApiKey ? { Authorization: `Bearer ${ziggyNexusApiKey}` } : {},
+          next: { revalidate: 60 },
+        },
+      )
+      if (res.ok) {
+        const data = await res.json() as { invoices?: ZiggyInvoiceRecord[] }
+        ziggyInvoices = data.invoices ?? []
+      }
+    } catch {
+      // Non-fatal — ZiggyInvoice section will be hidden
+    }
+  }
 
   const { data: invoices } = await supabase
     .from('invoices')
@@ -146,6 +182,81 @@ export default async function InvoicesPage() {
             Paid
           </h2>
           <InvoiceList invoices={paidInvoices} formatAmount={formatAmount} formatDate={formatDate} isOverdue={isOverdue} statusConfig={statusConfig} />
+        </div>
+      )}
+
+      {/* ZiggyInvoice section */}
+      {ziggyInvoices.length > 0 && (
+        <div style={{ marginTop: '48px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+            <h2 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
+              From ZiggyInvoice
+            </h2>
+            <span style={{ fontSize: '11px', color: 'var(--text-muted)', background: 'rgba(255,255,255,0.05)', padding: '2px 8px', borderRadius: '4px' }}>
+              {ziggyInvoices.length}
+            </span>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {ziggyInvoices.map((inv) => {
+              const overdue = inv.status !== 'Paid' && inv.due_date ? new Date(inv.due_date) < new Date() : false
+              const isPaid = inv.status === 'Paid'
+              const amountColor = overdue ? 'var(--status-rejected)' : isPaid ? 'var(--text-secondary)' : 'var(--text)'
+              const badgeColor = overdue ? 'var(--status-rejected)' : isPaid ? 'var(--status-approved)' : 'var(--status-pending)'
+              const badgeBg = overdue ? 'rgba(248,113,113,0.1)' : isPaid ? 'rgba(74,222,128,0.1)' : 'rgba(16,185,129,0.1)'
+              const formattedAmount = new Intl.NumberFormat('en-US', { style: 'currency', currency: (inv.currency || 'usd').toUpperCase() }).format(inv.balance_due)
+              const formattedDate = inv.due_date ? new Date(inv.due_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—'
+
+              return (
+                <div
+                  key={inv.id}
+                  style={{
+                    background: 'var(--surface)',
+                    border: `1px solid ${overdue ? 'rgba(248,113,113,0.3)' : 'var(--border-subtle)'}`,
+                    borderRadius: '10px',
+                    padding: '18px 22px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '16px',
+                    flexWrap: 'wrap',
+                  }}
+                >
+                  <div style={{ minWidth: '120px' }}>
+                    <div style={{ fontFamily: 'var(--font-playfair)', fontSize: '22px', color: amountColor, fontWeight: 400 }}>
+                      {formattedAmount}
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '2px' }}>
+                      {inv.invoice_number ?? inv.id.slice(0, 8).toUpperCase()}
+                    </div>
+                  </div>
+                  <div style={{ flex: 1, minWidth: '160px' }}>
+                    <div style={{ fontSize: '14px', color: 'var(--text)', marginBottom: '2px' }}>Invoice</div>
+                    <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
+                      Due: {formattedDate}
+                      {overdue && <span style={{ color: 'var(--status-rejected)', marginLeft: '8px' }}>Overdue</span>}
+                    </div>
+                  </div>
+                  <span style={{ fontSize: '12px', fontWeight: 600, padding: '4px 10px', borderRadius: '5px', color: badgeColor, background: badgeBg, whiteSpace: 'nowrap' }}>
+                    {overdue ? 'Overdue' : inv.status}
+                  </span>
+                  {!isPaid && inv.balance_due > 0 && (
+                    <a
+                      href={inv.payment_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ fontSize: '12px', fontWeight: 600, color: '#10b981', whiteSpace: 'nowrap', textDecoration: 'none' }}
+                    >
+                      Pay Now →
+                    </a>
+                  )}
+                  {inv.paid_at && (
+                    <div style={{ fontSize: '12px', color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>
+                      Paid {new Date(inv.paid_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
         </div>
       )}
 
