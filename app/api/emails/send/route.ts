@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Client not found' }, { status: 404 })
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nexus.ziggytechcreative.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://app.ziggynexus.com'
   const branding = {
     agencyName: client.brand_name ?? 'ZiggyNexus',
     primaryColor: client.brand_primary_color ?? '#10b981',

@@ -105,7 +105,7 @@ export default function DomainsPage() {
           <span style={{ color: 'var(--text)' }}>
             {typeof window !== 'undefined'
               ? window.location.hostname
-              : 'nexus.ziggytechcreative.com'}
+              : 'app.ziggynexus.com'}
           </span>
         </div>
         <p style={{ fontSize: '12px', color: 'var(--text-muted)', marginTop: '12px' }}>

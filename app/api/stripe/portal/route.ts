@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'No Stripe customer found' }, { status: 404 })
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nexus.ziggytechcreative.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://app.ziggynexus.com'
 
   const session = await stripe.billingPortal.sessions.create({
     customer: invoice.stripe_customer_id,

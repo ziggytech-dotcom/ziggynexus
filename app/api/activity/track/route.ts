@@ -4,7 +4,7 @@ import { resend, FROM_EMAIL } from '@/lib/resend'
 import { workspaceActivityEmail } from '@/lib/email-templates'
 
 const WORKSPACE_EMAIL = process.env.WORKSPACE_EMAIL ?? process.env.RESEND_FROM_EMAIL ?? ''
-const ADMIN_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nexus.ziggytechcreative.com'
+const ADMIN_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://app.ziggynexus.com'
 
 const EVENT_DESCRIPTIONS: Record<string, (data: Record<string, unknown>, clientName: string) => string> = {
   file_viewed: (d, n) => `${n} viewed "${d.article_title ?? d.file_name ?? 'a file'}" in their portal.`,

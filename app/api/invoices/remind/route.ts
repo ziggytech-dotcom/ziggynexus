@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: fetchError.message }, { status: 500 })
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nexus.ziggytechcreative.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://app.ziggynexus.com'
   const results: { invoiceId: string; reminderType: string; sent: boolean }[] = []
 
   for (const invoice of overdueInvoices ?? []) {

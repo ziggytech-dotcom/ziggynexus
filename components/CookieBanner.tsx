@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
-const STORAGE_KEY = 'nexusiq_cookie_consent'
+const STORAGE_KEY = 'ziggynexus_cookie_consent'
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
