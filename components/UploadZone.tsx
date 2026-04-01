@@ -169,11 +169,25 @@ export default function UploadZone({ clientId }: UploadZoneProps) {
           {dragging ? '📥' : '📁'}
         </div>
         <p style={{ color: 'var(--text)', fontSize: '15px', fontWeight: 500, marginBottom: '6px' }}>
-          {dragging ? 'Drop files here' : 'Drag & drop files, or click to browse'}
+          {dragging ? 'Drop files here' : 'Tap to upload'}
         </p>
-        <p style={{ color: 'var(--text-muted)', fontSize: '13px' }}>
-          Images, PDFs, videos, docs — up to 50MB each
+        <p className="hidden-mobile" style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '12px' }}>
+          Or drag &amp; drop — Images, PDFs, videos, docs up to 50MB
         </p>
+        <span
+          style={{
+            display: 'inline-block',
+            padding: '10px 24px',
+            background: '#10b981',
+            color: '#fff',
+            borderRadius: '8px',
+            fontSize: '14px',
+            fontWeight: 600,
+            pointerEvents: 'none',
+          }}
+        >
+          Choose Files
+        </span>
         <input
           ref={inputRef}
           type="file"
