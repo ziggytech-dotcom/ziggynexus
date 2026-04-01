@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { resend, FROM_EMAIL } from '@/lib/resend'
 import { welcomeEmail } from '@/lib/email-templates'
 import { upsertSharedContact } from '@/lib/sharedContacts'
+import { triggerZapierWebhook } from '@/lib/zapier'
 
 export async function POST(request: Request) {
   const supabase = await createClient()
@@ -33,6 +34,11 @@ export async function POST(request: Request) {
     .select('id, name, email, phone, company, brand_name, brand_primary_color, brand_logo_url')
     .eq('email', user.email)
     .single()
+
+  // Fire Zapier client.added webhook (non-blocking)
+  if (client) {
+    triggerZapierWebhook(client.id as string, 'client.added', { client })
+  }
 
   // Sync to shared_contacts (best-effort, fire-and-forget)
   if (client) {

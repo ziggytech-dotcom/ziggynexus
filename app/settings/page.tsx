@@ -363,6 +363,131 @@ export default function SettingsPage() {
           {saving ? 'Saving…' : 'Save Settings'}
         </button>
       </form>
+
+      {/* Zapier Integration */}
+      <div style={{ marginTop: '48px', maxWidth: '560px' }}>
+        <div style={{ marginBottom: '20px' }}>
+          <h2
+            style={{
+              fontFamily: 'var(--font-playfair)',
+              fontSize: '22px',
+              fontWeight: 400,
+              color: 'var(--text)',
+              marginBottom: '6px',
+            }}
+          >
+            Zapier Integration
+          </h2>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>
+            Connect your portal to 6,000+ apps via Zapier.{' '}
+            <a
+              href="https://zapier.com/developer"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#10b981', textDecoration: 'none' }}
+            >
+              Open Zapier →
+            </a>
+          </p>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <Section title="Triggers" description="Events your portal sends to Zapier when they happen.">
+            <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {[
+                { event: 'client.added', label: 'Client Added', desc: 'Fires when a new client completes onboarding.' },
+                { event: 'deliverable.approved', label: 'Deliverable Approved', desc: 'Fires when a client approves a deliverable.' },
+                { event: 'deliverable.rejected', label: 'Deliverable Rejected', desc: 'Fires when a client rejects a deliverable.' },
+                { event: 'invoice.viewed', label: 'Invoice Viewed', desc: 'Fires when a client views a file or invoice.' },
+                { event: 'message.received', label: 'Message Received', desc: 'Fires when a client sends a message.' },
+              ].map(({ event, label, desc }) => (
+                <li
+                  key={event}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '10px',
+                    padding: '10px 12px',
+                    background: 'var(--elevated)',
+                    borderRadius: '8px',
+                    border: '1px solid var(--border-subtle)',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      background: '#10b981',
+                      flexShrink: 0,
+                      marginTop: '5px',
+                    }}
+                  />
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text)', marginBottom: '2px' }}>
+                      {label}
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'monospace', marginBottom: '2px' }}>
+                      {event}
+                    </div>
+                    <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{desc}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Actions" description="Things Zapier can do in your portal on your behalf.">
+            <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {[
+                { label: 'Create Client', endpoint: 'POST /api/zapier/actions/create-client', desc: 'Create a new client record from any Zapier trigger.' },
+                { label: 'Add Deliverable', endpoint: 'POST /api/zapier/actions/add-deliverable', desc: 'Add a deliverable to an existing client.' },
+              ].map(({ label, endpoint, desc }) => (
+                <li
+                  key={label}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'flex-start',
+                    gap: '10px',
+                    padding: '10px 12px',
+                    background: 'var(--elevated)',
+                    borderRadius: '8px',
+                    border: '1px solid var(--border-subtle)',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      background: 'var(--gold-light, #C9A96E)',
+                      flexShrink: 0,
+                      marginTop: '5px',
+                    }}
+                  />
+                  <div>
+                    <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text)', marginBottom: '2px' }}>
+                      {label}
+                    </div>
+                    <div style={{ fontSize: '11px', color: 'var(--text-muted)', fontFamily: 'monospace', marginBottom: '2px' }}>
+                      {endpoint}
+                    </div>
+                    <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{desc}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="Authentication" description="Use your API key to authenticate Zapier action requests.">
+            <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
+              Set the <code style={{ fontSize: '12px', padding: '2px 6px', background: 'var(--elevated)', borderRadius: '4px', border: '1px solid var(--border-subtle)', color: 'var(--text)' }}>ZAPIER_API_KEY</code> environment variable on your server,
+              then pass it as the <code style={{ fontSize: '12px', padding: '2px 6px', background: 'var(--elevated)', borderRadius: '4px', border: '1px solid var(--border-subtle)', color: 'var(--text)' }}>X-API-Key</code> header on all action requests.
+              Subscribe/unsubscribe endpoints use your admin session cookie.
+            </p>
+          </Section>
+        </div>
+      </div>
     </div>
   )
 }

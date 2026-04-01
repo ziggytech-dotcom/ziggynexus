@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { resend, FROM_EMAIL } from '@/lib/resend'
 import { workspaceActivityEmail } from '@/lib/email-templates'
+import { triggerZapierWebhook } from '@/lib/zapier'
 
 const WORKSPACE_EMAIL = process.env.WORKSPACE_EMAIL ?? process.env.RESEND_FROM_EMAIL ?? ''
 const ADMIN_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://app.ziggynexus.com'
@@ -58,6 +59,13 @@ export async function POST(request: Request) {
   if (insertError) {
     console.error('Activity insert error:', insertError)
     return NextResponse.json({ error: 'Failed to log activity' }, { status: 500 })
+  }
+
+  // Fire Zapier webhooks for mapped event types (non-blocking)
+  if (eventType === 'file_viewed') {
+    triggerZapierWebhook(client.id, 'invoice.viewed', { event_data: eventData, client_id: client.id })
+  } else if (eventType === 'message_sent') {
+    triggerZapierWebhook(client.id, 'message.received', { event_data: eventData, client_id: client.id })
   }
 
   // Notify workspace via email (fire-and-forget; do not fail the request if email fails)

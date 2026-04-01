@@ -33,6 +33,14 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
     }
   }
 
+  function fireZapierTrigger(status: string) {
+    fetch('/api/zapier/triggers/deliverable-status', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ deliverableId: deliverable.id, status }),
+    }).catch(() => {})
+  }
+
   async function handleApprove() {
     setLoading('approve')
     setError(null)
@@ -53,6 +61,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
       setLocalStatus('approved')
       onStatusChange?.(deliverable.id, 'approved')
       await sendStatusEmail('approved')
+      fireZapierTrigger('approved')
     }
     setLoading(null)
   }
@@ -124,6 +133,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
       setRejectReason('')
       onStatusChange?.(deliverable.id, 'rejected')
       await sendStatusEmail('rejected')
+      fireZapierTrigger('rejected')
     }
     setLoading(null)
   }
