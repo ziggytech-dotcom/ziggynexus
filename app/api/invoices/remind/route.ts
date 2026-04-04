@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // Payment reminder API — called by a cron job or manually
 // Sends reminder emails for invoices that are 3, 7, or 14 days overdue
 import { NextResponse } from 'next/server'

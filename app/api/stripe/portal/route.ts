@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // Create a Stripe Billing Portal session for the authenticated client
 import { NextResponse } from 'next/server'
 import Stripe from 'stripe'

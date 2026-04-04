@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // Stripe webhook handler — syncs invoice events to Supabase
 import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
