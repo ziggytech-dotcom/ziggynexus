@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "ZiggyNexus vs Copilot — 89% cheaper for a team | ZiggyNexus",
+  title: "ZiggyNexus vs Copilot &mdash; 89% cheaper for a team | ZiggyNexus",
   description:
-    "Copilot charges $69/mo per seat. A 5-person team pays $345/mo. ZiggyNexus gives you 5 seats at $39/mo — same client portal experience, a fraction of the cost.",
+    "Copilot charges $69/mo per seat. A 5-person team pays $345/mo. ZiggyNexus gives you 5 seats at $39/mo &mdash; same client portal experience, a fraction of the cost.",
 }
 
 const ACCENT = "#10b981"
@@ -85,7 +85,7 @@ export default function VsCopilot() {
         </h1>
 
         <p style={{ fontSize: 18, color: "#888", lineHeight: 1.6, marginBottom: 36, maxWidth: 600, margin: "0 auto 36px" }}>
-          A 5-person agency on Copilot pays $345/mo. On ZiggyNexus, that same team pays $39/mo — and gets the same client portal experience. That's <strong style={{ color: "#fff" }}>$3,672 saved per year.</strong>
+          A 5-person agency on Copilot pays $345/mo. On ZiggyNexus, that same team pays $39/mo &mdash; and gets the same client portal experience. That's <strong style={{ color: "#fff" }}>$3,672 saved per year.</strong>
         </p>
 
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
@@ -93,7 +93,7 @@ export default function VsCopilot() {
             background: ACCENT, color: "#fff", padding: "15px 30px",
             borderRadius: 10, fontSize: 16, fontWeight: 600,
           }}>
-            Start Free Trial — $39/mo
+            Start Free Trial &mdash; $39/mo
           </a>
           <a href="/#pricing" style={{
             background: "transparent", color: "#fff", padding: "15px 30px",
@@ -231,7 +231,7 @@ export default function VsCopilot() {
           textAlign: "center",
         }}>
           <p style={{ color: "#ccc", fontSize: 16, lineHeight: 1.7 }}>
-            💡 <strong style={{ color: "#fff" }}>Bottom line:</strong> Copilot charges $69/mo for 1 seat — a 5-person team is $345/mo. ZiggyNexus includes 5 seats at $39/mo. Same client portal experience,{" "}
+            💡 <strong style={{ color: "#fff" }}>Bottom line:</strong> Copilot charges $69/mo for 1 seat &mdash; a 5-person team is $345/mo. ZiggyNexus includes 5 seats at $39/mo. Same client portal experience,{" "}
             <strong style={{ color: ACCENT }}>89% cheaper for a team.</strong>
           </p>
         </div>
@@ -265,7 +265,7 @@ export default function VsCopilot() {
           fontSize: 17,
           fontWeight: 700,
         }}>
-          Start Free Trial — $39/mo →
+          Start Free Trial &mdash; $39/mo →
         </a>
       </section>
 

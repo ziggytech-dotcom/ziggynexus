@@ -75,7 +75,7 @@ export default function DomainsPage() {
           ...prev,
           [clientId]: {
             type: 'error',
-            text: `CNAME not yet active. Found: "${data.resolvedCname || 'nothing'}" — expected: "${data.expected}"`,
+            text: `CNAME not yet active. Found: "${data.resolvedCname || 'nothing'}" &mdash; expected: "${data.expected}"`,
           },
         }))
         setClients((prev) => prev.map((c) => c.id === clientId ? { ...c, custom_domain_verified: false } : c))

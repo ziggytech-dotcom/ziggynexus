@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — ZiggyNexus',
+  title: 'Privacy Policy &mdash; ZiggyNexus',
   description: 'How ZiggyTech Ventures LLC collects, uses, and protects your information.',
 }
 
@@ -110,10 +110,10 @@ function LegalContent() {
 
       <Section title="2. Data Processor / Controller Distinction">
         <p style={prose}>
-          <strong style={{ color: 'var(--text)' }}>ZiggyTech operates primarily as a data processor.</strong> Our customers (you, the business) are the data controllers — you determine the purposes and means by which personal data is processed. ZiggyTech processes personal data on your behalf, strictly according to your instructions and our Data Processing Agreement (DPA).
+          <strong style={{ color: 'var(--text)' }}>ZiggyTech operates primarily as a data processor.</strong> Our customers (you, the business) are the data controllers &mdash; you determine the purposes and means by which personal data is processed. ZiggyTech processes personal data on your behalf, strictly according to your instructions and our Data Processing Agreement (DPA).
         </p>
         <p style={prose}>
-          In limited circumstances ZiggyTech acts as a data controller — for example, when processing account registration, billing data, and usage analytics for our own business purposes.
+          In limited circumstances ZiggyTech acts as a data controller &mdash; for example, when processing account registration, billing data, and usage analytics for our own business purposes.
         </p>
       </Section>
 
@@ -123,7 +123,7 @@ function LegalContent() {
           {[
             'Contact data: names, email addresses, phone numbers, mailing addresses',
             'Employment & payroll data: SSNs, EINs, wage information, tax elections',
-            'Health information (PHI) — only when a BAA is in place',
+            'Health information (PHI) &mdash; only when a BAA is in place',
             'Document content: contracts, agreements, signed forms and metadata',
             'Scheduling, financial, and intake form data',
           ].map((item) => (

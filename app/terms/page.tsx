@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — ZiggyNexus',
+  title: 'Terms of Service &mdash; ZiggyNexus',
   description: 'The terms and conditions governing your use of the ZiggyTech Business Suite.',
 }
 
@@ -114,7 +114,7 @@ function TermsContent() {
       </Section>
 
       <Section title="3. Account Registration and Eligibility">
-        <p style={prose}>You must be at least 18 years of age and have the legal capacity to enter into contracts. Our Services are intended for business use only — not personal, family, or household use.</p>
+        <p style={prose}>You must be at least 18 years of age and have the legal capacity to enter into contracts. Our Services are intended for business use only &mdash; not personal, family, or household use.</p>
         <p style={prose}>You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account. Notify us immediately at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a> if you suspect unauthorized access.</p>
       </Section>
 
@@ -160,7 +160,7 @@ function TermsContent() {
         <p style={prose}>You may withdraw consent to electronic records by notifying us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a>. Withdrawal may result in limited access to certain Services.</p>
       </Section>
 
-      <Section title="8. ZiggyPayroll — Important Disclaimers">
+      <Section title="8. ZiggyPayroll &mdash; Important Disclaimers">
         <p style={prose}><strong style={{ color: 'var(--text)' }}>ZiggyTech is a software platform provider, not a licensed tax advisor, accountant, or PEO.</strong> You are solely responsible for accurate and timely filing of all federal, state, and local tax forms, including W-2, 1099-NEC, Form 941, and applicable state equivalents. ZiggyTech is not liable for any tax penalties resulting from inaccurate or untimely filings.</p>
         <p style={prose}><strong style={{ color: 'var(--text)' }}>Worker Classification:</strong> ZiggyTech does not provide legal advice on employee vs. contractor classification. Misclassification can result in significant tax liability and legal exposure. Consult a licensed employment attorney before classifying workers.</p>
       </Section>

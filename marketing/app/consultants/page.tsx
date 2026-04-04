@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ZiggyNexus for Consultants — Look bigger. Work smarter.",
+  title: "ZiggyNexus for Consultants &mdash; Look bigger. Work smarter.",
   description:
     "Independent consultants and boutique firms use ZiggyNexus to deliver a Fortune 500 client experience at $39/mo. Branded portals, e-sign, invoicing, and messaging in one place.",
 };
@@ -16,7 +16,7 @@ const benefits = [
     ),
     title: "Look like a larger firm",
     description:
-      "When you invite a client to portal.yourname.com with your logo and colors, they experience a polished, professional setup that signals you run a tight operation — not a freelancer working from their couch.",
+      "When you invite a client to portal.yourname.com with your logo and colors, they experience a polished, professional setup that signals you run a tight operation &mdash; not a freelancer working from their couch.",
   },
   {
     icon: (
@@ -26,7 +26,7 @@ const benefits = [
     ),
     title: "Kill the contract back-and-forth",
     description:
-      "Send a proposal or contract through the portal and your client signs it in minutes — legally binding, with a timestamp and IP log. No printing, no scanning, no waiting.",
+      "Send a proposal or contract through the portal and your client signs it in minutes &mdash; legally binding, with a timestamp and IP log. No printing, no scanning, no waiting.",
   },
   {
     icon: (
@@ -56,7 +56,7 @@ const benefits = [
     ),
     title: "One place for client communication",
     description:
-      "No more digging through Gmail threads from 6 months ago. Every conversation, every decision, every update lives in the client's portal — searchable, organized, and yours.",
+      "No more digging through Gmail threads from 6 months ago. Every conversation, every decision, every update lives in the client's portal &mdash; searchable, organized, and yours.",
   },
   {
     icon: (
@@ -75,19 +75,19 @@ const workflow = [
     step: "1",
     title: "New client signs on",
     description:
-      "You create a portal in 60 seconds, customized with your branding. Send an automated invite — they're in their workspace in minutes.",
+      "You create a portal in 60 seconds, customized with your branding. Send an automated invite &mdash; they're in their workspace in minutes.",
   },
   {
     step: "2",
     title: "Onboarding runs automatically",
     description:
-      "Your pre-built onboarding wizard walks them through intake forms, document uploads, and contract signing — without you lifting a finger.",
+      "Your pre-built onboarding wizard walks them through intake forms, document uploads, and contract signing &mdash; without you lifting a finger.",
   },
   {
     step: "3",
     title: "Engagement runs in the portal",
     description:
-      "Share reports, exchange messages, update documents, and request additional signatures — all within the portal. No email required.",
+      "Share reports, exchange messages, update documents, and request additional signatures &mdash; all within the portal. No email required.",
   },
   {
     step: "4",
@@ -116,7 +116,7 @@ export default function ConsultantsPage() {
             </h1>
             <p className="text-xl text-zinc-400 leading-relaxed mb-10 max-w-2xl">
               Independent consultants and boutique firms use ZiggyNexus to
-              deliver a client experience that rivals the big agencies — without
+              deliver a client experience that rivals the big agencies &mdash; without
               the overhead, the headcount, or the enterprise price tag.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -133,7 +133,7 @@ export default function ConsultantsPage() {
                 href="/pricing"
                 className="border border-[#27272a] hover:border-emerald-500 text-white px-8 py-4 rounded-xl text-base transition-colors inline-flex items-center justify-center"
               >
-                See pricing — $39/mo
+                See pricing &mdash; $39/mo
               </Link>
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function ConsultantsPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Your new client workflow</h2>
             <p className="text-zinc-400 text-lg">
-              From signed contract to final invoice — all in ZiggyNexus.
+              From signed contract to final invoice &mdash; all in ZiggyNexus.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -276,7 +276,7 @@ export default function ConsultantsPage() {
             href="https://app.ziggynexus.com/signup"
             className="bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-4 rounded-xl text-base transition-colors inline-flex items-center gap-2"
           >
-            Get Started Free — $39/mo
+            Get Started Free &mdash; $39/mo
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

@@ -61,12 +61,12 @@ export default async function DashboardPage() {
 
   return (
     <div className="fade-in">
-      {/* Onboarding tour — shown once after first login */}
+      {/* Onboarding tour &mdash; shown once after first login */}
       {!tourCompleted && user?.email && (
         <OnboardingTourModal clientEmail={user.email} />
       )}
 
-      {/* Getting started checklist — shown until all steps done */}
+      {/* Getting started checklist &mdash; shown until all steps done */}
       {!tourCompleted && (
         <GettingStartedChecklist
           loggedIn={true}
@@ -275,7 +275,7 @@ export default async function DashboardPage() {
             </div>
           ) : (
             <p style={{ color: 'var(--text-muted)', fontSize: '14px' }}>
-              No deliverables yet. Check back soon — your team is working on it.
+              No deliverables yet. Check back soon &mdash; your team is working on it.
             </p>
           )}
         </div>

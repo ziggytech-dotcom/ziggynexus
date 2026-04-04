@@ -94,7 +94,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: `${branding.agencyName} <${FROM_EMAIL}>`,
       to: client.email,
-      subject: `New deliverable ready for your review — ${title}`,
+      subject: `New deliverable ready for your review &mdash; ${title}`,
       html,
     }).catch((err: unknown) => {
       console.error('Failed to send deliverable notification:', err)

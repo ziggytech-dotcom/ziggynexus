@@ -96,7 +96,7 @@ export async function POST(request: Request) {
     resend.emails.send({
       from: `${branding.agencyName} Portal <${FROM_EMAIL}>`,
       to: WORKSPACE_EMAIL,
-      subject: `[Portal] ${client.name} — ${eventType.replace(/_/g, ' ')}`,
+      subject: `[Portal] ${client.name} &mdash; ${eventType.replace(/_/g, ' ')}`,
       html,
     }).then(async () => {
       // Mark as notified

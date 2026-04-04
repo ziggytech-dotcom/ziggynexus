@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Features — ZiggyNexus",
+  title: "Features &mdash; ZiggyNexus",
   description:
     "Explore every ZiggyNexus feature: branded portals, online invoicing, secure file sharing, e-sign contracts, client messaging, and onboarding wizards.",
 };
@@ -16,13 +16,13 @@ const features = [
     title: "Branded White-Label Portals",
     tagline: "Your brand. Your client's experience.",
     description:
-      "Every client you add to ZiggyNexus gets their own dedicated portal — and it looks nothing like a generic SaaS dashboard. Upload your logo, set your brand colors, and use your custom domain. Your clients see your business, not ours.",
+      "Every client you add to ZiggyNexus gets their own dedicated portal &mdash; and it looks nothing like a generic SaaS dashboard. Upload your logo, set your brand colors, and use your custom domain. Your clients see your business, not ours.",
     benefits: [
       "Custom domain support (e.g. portal.youragency.com)",
       "Per-client branding with logo and color themes",
       "White-label email notifications sent from your domain",
       "No ZiggyNexus branding visible to your clients",
-      "Isolated workspaces — each client only sees their own data",
+      "Isolated workspaces &mdash; each client only sees their own data",
     ],
     accent: "Build trust with a professional, cohesive brand experience at every touchpoint.",
   },
@@ -35,7 +35,7 @@ const features = [
     title: "Online Invoicing",
     tagline: "Send. Get paid. Move on.",
     description:
-      "Create professional invoices in seconds directly from your ZiggyNexus dashboard. Clients receive a branded invoice in their portal and can pay with a card, bank transfer, or other methods — no login friction, no chasing.",
+      "Create professional invoices in seconds directly from your ZiggyNexus dashboard. Clients receive a branded invoice in their portal and can pay with a card, bank transfer, or other methods &mdash; no login friction, no chasing.",
     benefits: [
       "Create invoices with line items, taxes, and discounts",
       "Stripe-powered card and ACH bank transfer payments",
@@ -61,7 +61,7 @@ const features = [
       "Folder organization per client portal",
       "Download-only or view-only permission modes",
       "File version history to track changes over time",
-      "Upload requests — ask clients to upload documents directly",
+      "Upload requests &mdash; ask clients to upload documents directly",
       "No storage limits on Business plan",
     ],
     accent: "Clients never see other clients' files. Isolation is built into every portal.",
@@ -75,7 +75,7 @@ const features = [
     title: "E-Sign Contracts",
     tagline: "Signatures in minutes, not days.",
     description:
-      "Upload any contract, proposal, or agreement and send it for signature directly through ZiggyNexus. Clients sign with a legally-binding electronic signature right inside their portal — no DocuSign account required on their end.",
+      "Upload any contract, proposal, or agreement and send it for signature directly through ZiggyNexus. Clients sign with a legally-binding electronic signature right inside their portal &mdash; no DocuSign account required on their end.",
     benefits: [
       "Legally binding e-signatures compliant with ESIGN Act and eIDAS",
       "Signature audit trail with timestamps and IP logs",
@@ -95,7 +95,7 @@ const features = [
     title: "Client Messaging",
     tagline: "One thread per client. Zero confusion.",
     description:
-      "Replace scattered email threads, DMs, and text messages with a single, organized inbox per client. Conversations are context-aware — clients can reference files, invoices, and contracts directly in a message thread.",
+      "Replace scattered email threads, DMs, and text messages with a single, organized inbox per client. Conversations are context-aware &mdash; clients can reference files, invoices, and contracts directly in a message thread.",
     benefits: [
       "Threaded, organized conversations per client portal",
       "Rich text formatting, file attachments inline",
@@ -115,7 +115,7 @@ const features = [
     title: "Onboarding Wizard",
     tagline: "First impressions that run themselves.",
     description:
-      "Build a structured onboarding flow once, then deploy it to every new client automatically. Collect intake forms, request documents, prompt signatures, and set clear next steps — without a single back-and-forth email.",
+      "Build a structured onboarding flow once, then deploy it to every new client automatically. Collect intake forms, request documents, prompt signatures, and set clear next steps &mdash; without a single back-and-forth email.",
     benefits: [
       "Drag-and-drop onboarding step builder",
       "Conditional steps based on client type or service package",
@@ -146,7 +146,7 @@ export default function FeaturesPage() {
           </h1>
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
             Every feature in ZiggyNexus was designed around real workflows from
-            agencies, consultants, and service businesses — not enterprise
+            agencies, consultants, and service businesses &mdash; not enterprise
             bloat.
           </p>
           <a

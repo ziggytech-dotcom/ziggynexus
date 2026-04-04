@@ -143,7 +143,7 @@ export default async function ApprovalDetailPage({
             </div>
           )}
 
-          {/* Comments thread — always shown, with reply form */}
+          {/* Comments thread &mdash; always shown, with reply form */}
           <CommentThread
             deliverableId={id}
             initialComments={(comments ?? []) as ApprovalComment[]}

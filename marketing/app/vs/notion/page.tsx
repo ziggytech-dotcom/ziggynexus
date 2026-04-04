@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "ZiggyNexus vs Notion — Same power. Half the price.",
-  description: "Notion starts at $16–$18/user/mo. ZiggyNexus gives you the same core features for $39/mo — plus it's part of the ZiggyTech Business Suite.",
+  title: "ZiggyNexus vs Notion &mdash; Same power. Half the price.",
+  description: "Notion starts at $16–$18/user/mo. ZiggyNexus gives you the same core features for $39/mo &mdash; plus it's part of the ZiggyTech Business Suite.",
 }
 
 const ACCENT = "#10b981"
@@ -11,7 +11,7 @@ const SIGNUP = "https://app.ziggynexus.com/signup"
 const rows: [string, string, string][] = [
           ["Starting Price", "$39/mo (5 seats)", "$16/user/mo"],
           ["Client Portal", "✅ Branded, per-client", "❌ Internal workspace only"],
-          ["Client-Facing Sharing", "✅ Yes — full portal", "⚠️ Guest access only"],
+          ["Client-Facing Sharing", "✅ Yes &mdash; full portal", "⚠️ Guest access only"],
           ["Custom Domain", "✅", "❌"],
           ["E-Signature", "✅", "❌"],
           ["Invoice Integration", "✅ ZiggyInvoice native", "❌"],
@@ -24,12 +24,12 @@ const rows: [string, string, string][] = [
 ]
 
 const bullets = [
-            "Notion is a great internal tool — but it's not built for client portals. ZiggyNexus is.",
+            "Notion is a great internal tool &mdash; but it's not built for client portals. ZiggyNexus is.",
             "ZiggyNexus gives each client their own branded portal. Notion gives guests limited access to your internal workspace.",
             "ZiggyNexus includes e-signature, invoicing, and client messaging. Notion has none of these.",
             "A 5-person team on Notion Plus = $80–90/mo. ZiggyNexus is $39/mo with 5 seats included.",
-            "ZiggyNexus integrates natively with ZiggyInvoice — send invoices and collect payments inside the portal",
-            "ZiggyNexus is part of the ZiggyTech Business Suite — 9 more apps for $179/mo total",
+            "ZiggyNexus integrates natively with ZiggyInvoice &mdash; send invoices and collect payments inside the portal",
+            "ZiggyNexus is part of the ZiggyTech Business Suite &mdash; 9 more apps for $179/mo total",
 ]
 
 export default function VsNotion() {
@@ -77,7 +77,7 @@ export default function VsNotion() {
           display: "inline-block", background: ACCENT, color: "#fff", textDecoration: "none",
           padding: "14px 28px", borderRadius: 10, fontSize: 16, fontWeight: 700,
         }}>
-          Start Free Trial — No credit card required
+          Start Free Trial &mdash; No credit card required
         </a>
       </section>
 
@@ -138,7 +138,7 @@ export default function VsNotion() {
             display: "block", background: ACCENT, color: "#fff", textDecoration: "none",
             padding: "15px", borderRadius: 10, fontSize: 16, fontWeight: 700,
           }}>
-            Start Free Trial — 14 days free
+            Start Free Trial &mdash; 14 days free
           </a>
         </div>
         <div style={{ background: "#0d0d0d", border: "1px solid #1f1f1f", borderRadius: 12, padding: "20px 24px" }}>

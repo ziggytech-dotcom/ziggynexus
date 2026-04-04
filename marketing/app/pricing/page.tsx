@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Pricing — ZiggyNexus",
+  title: "Pricing &mdash; ZiggyNexus",
   description:
     "ZiggyNexus costs $39/mo. 5 team seats included, unlimited client portals, all features included. $12/seat/mo after 5 seats. No feature tiers, no surprises.",
 };
@@ -32,17 +32,17 @@ const faqs = [
   {
     question: "Is there a free trial?",
     answer:
-      "Yes. You get a full 14-day free trial with access to all features. No credit card required to start. At the end of the trial, you can subscribe for $39/mo or cancel — no pressure.",
+      "Yes. You get a full 14-day free trial with access to all features. No credit card required to start. At the end of the trial, you can subscribe for $39/mo or cancel &mdash; no pressure.",
   },
   {
     question: "How many clients can I have?",
     answer:
-      "Unlimited. We don't charge per client or per portal. You can have 5 clients or 500 clients — the price stays $39/mo.",
+      "Unlimited. We don't charge per client or per portal. You can have 5 clients or 500 clients &mdash; the price stays $39/mo.",
   },
   {
     question: "Is there a per-user or per-seat fee for my team?",
     answer:
-      "Your $39/mo subscription includes 5 team seats. Additional seats are $12/seat/mo. For most small businesses and agencies, 5 seats covers the whole team — and you still pay a fraction of what Copilot charges for a single seat ($69/mo).",
+      "Your $39/mo subscription includes 5 team seats. Additional seats are $12/seat/mo. For most small businesses and agencies, 5 seats covers the whole team &mdash; and you still pay a fraction of what Copilot charges for a single seat ($69/mo).",
   },
   {
     question: "What payment methods do you accept?",
@@ -52,12 +52,12 @@ const faqs = [
   {
     question: "Can I cancel anytime?",
     answer:
-      "Absolutely. Month-to-month with no long-term commitment. Cancel from your dashboard and your subscription ends at the next billing cycle — no penalties.",
+      "Absolutely. Month-to-month with no long-term commitment. Cancel from your dashboard and your subscription ends at the next billing cycle &mdash; no penalties.",
   },
   {
     question: "What happens to my data if I cancel?",
     answer:
-      "You have 30 days after cancellation to export all your data — invoices, files, messages, and signed contracts. After that, data is permanently deleted.",
+      "You have 30 days after cancellation to export all your data &mdash; invoices, files, messages, and signed contracts. After that, data is permanently deleted.",
   },
   {
     question: "Do you charge transaction fees on invoices?",
@@ -67,7 +67,7 @@ const faqs = [
   {
     question: "Is there an annual plan?",
     answer:
-      "Yes — pay annually and save 10%, bringing your effective cost to $35/mo ($421/yr). Switch to annual anytime from your billing settings.",
+      "Yes &mdash; pay annually and save 10%, bringing your effective cost to $35/mo ($421/yr). Switch to annual anytime from your billing settings.",
   },
 ];
 
@@ -136,7 +136,7 @@ export default function PricingPage() {
                   $39
                   <span className="text-xl text-zinc-400 font-normal">/mo</span>
                 </div>
-                <p className="text-zinc-500">or $421/yr — save 10% with annual billing</p>
+                <p className="text-zinc-500">or $421/yr &mdash; save 10% with annual billing</p>
               </div>
 
               <ul className="space-y-3 mb-8">

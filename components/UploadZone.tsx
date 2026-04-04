@@ -172,7 +172,7 @@ export default function UploadZone({ clientId }: UploadZoneProps) {
           {dragging ? 'Drop files here' : 'Tap to upload'}
         </p>
         <p className="hidden-mobile" style={{ color: 'var(--text-muted)', fontSize: '13px', marginBottom: '12px' }}>
-          Or drag &amp; drop — Images, PDFs, videos, docs up to 50MB
+          Or drag &amp; drop &mdash; Images, PDFs, videos, docs up to 50MB
         </p>
         <span
           style={{

@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic';
-// Stripe webhook handler — syncs invoice events to Supabase
+// Stripe webhook handler &mdash; syncs invoice events to Supabase
 import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { createClient } from '@/lib/supabase/server'
@@ -110,7 +110,7 @@ export async function POST(request: Request) {
     }
 
     default:
-      // Unhandled event type — safe to ignore
+      // Unhandled event type &mdash; safe to ignore
       break
   }
 

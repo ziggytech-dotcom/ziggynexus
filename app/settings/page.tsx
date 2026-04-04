@@ -327,7 +327,7 @@ export default function SettingsPage() {
               </div>
               {!isPremium && (
                 <div style={{ fontSize: '11px', color: '#10b981', marginTop: '2px' }}>
-                  Growth plan or above — upgrade to unlock
+                  Growth plan or above &mdash; upgrade to unlock
                 </div>
               )}
             </div>

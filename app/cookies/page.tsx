@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy — ZiggyNexus',
+  title: 'Cookie Policy &mdash; ZiggyNexus',
   description: 'How ZiggyTech Ventures LLC uses cookies and tracking technologies.',
 }
 
@@ -177,12 +177,12 @@ function CookieContent() {
           ))}
         </ul>
         <p style={prose}>
-          <strong style={{ color: 'var(--text)' }}>California Residents (CCPA/CPRA):</strong> To opt out of sharing personal information for cross-context behavioral advertising, email us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a> (subject: &quot;CCPA Opt-Out — Cookies&quot;). Requests will be processed within 15 business days.
+          <strong style={{ color: 'var(--text)' }}>California Residents (CCPA/CPRA):</strong> To opt out of sharing personal information for cross-context behavioral advertising, email us at <a href="mailto:legal@ziggytechventures.com" style={{ color: '#10b981' }}>legal@ziggytechventures.com</a> (subject: &quot;CCPA Opt-Out &mdash; Cookies&quot;). Requests will be processed within 15 business days.
         </p>
       </Section>
 
       <Section title="7. Data Retention">
-        <p style={prose}>Cookie lifespans are listed in the tables above. Server-side data collected through cookies is retained in accordance with our <Link href="/privacy" style={{ color: '#10b981', textDecoration: 'underline' }}>Privacy Policy</Link> — generally 12 months for usage and log data.</p>
+        <p style={prose}>Cookie lifespans are listed in the tables above. Server-side data collected through cookies is retained in accordance with our <Link href="/privacy" style={{ color: '#10b981', textDecoration: 'underline' }}>Privacy Policy</Link> &mdash; generally 12 months for usage and log data.</p>
       </Section>
 
       <Section title="8. Changes to This Policy">

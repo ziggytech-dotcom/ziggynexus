@@ -29,7 +29,7 @@ export default function ApprovalCard({ deliverable, onStatusChange }: ApprovalCa
         body: JSON.stringify({ type: 'approval_status', deliverableId: deliverable.id, newStatus }),
       })
     } catch {
-      // Non-critical — don't block the UI update
+      // Non-critical &mdash; don't block the UI update
     }
   }
 

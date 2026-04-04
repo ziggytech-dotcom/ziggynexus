@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'deliverableId and a triggerable status are required.' }, { status: 400 })
   }
 
-  // Resolve client — verify deliverable belongs to this user's client record
+  // Resolve client &mdash; verify deliverable belongs to this user's client record
   const { data: client } = await supabase
     .from('clients')
     .select('id')

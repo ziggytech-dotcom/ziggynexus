@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ZiggyNexus vs SuiteDash — Modern client portal vs complex legacy software",
+  title: "ZiggyNexus vs SuiteDash &mdash; Modern client portal vs complex legacy software",
   description:
     "ZiggyNexus vs SuiteDash: modern, clean UI vs outdated complexity. Full feature comparison showing why service businesses are switching to ZiggyNexus.",
 };
@@ -80,7 +80,7 @@ const comparisonRows = [
   },
   {
     feature: "Onboarding wizard",
-    ziggynexus: "Yes — purpose-built",
+    ziggynexus: "Yes &mdash; purpose-built",
     suitedash: "Partially (complex setup)",
     winner: "ziggynexus",
     note: "ZiggyNexus onboarding is drag-and-drop; SuiteDash requires custom workflow configuration",
@@ -145,7 +145,7 @@ export default function VsSuiteDashPage() {
           <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
             SuiteDash tried to build everything for everyone and ended up with a
             product that takes days to configure and confuses your clients.
-            ZiggyNexus is purpose-built for service businesses — simple to
+            ZiggyNexus is purpose-built for service businesses &mdash; simple to
             set up, beautiful to use.
           </p>
 
@@ -254,7 +254,7 @@ export default function VsSuiteDashPage() {
                 {[
                   {
                     title: "Your portal is only valuable if clients log in",
-                    body: "SuiteDash portals are notoriously overwhelming. Clients see a dense dashboard full of modules they don't understand. Most end up emailing you anyway — defeating the purpose.",
+                    body: "SuiteDash portals are notoriously overwhelming. Clients see a dense dashboard full of modules they don't understand. Most end up emailing you anyway &mdash; defeating the purpose.",
                   },
                   {
                     title: "Days to configure, not minutes",
@@ -262,11 +262,11 @@ export default function VsSuiteDashPage() {
                   },
                   {
                     title: "You're paying for features you don't need",
-                    body: "SuiteDash bundles CRM, HR tools, and project management you'll never use — and charges you for the privilege. ZiggyNexus is built specifically for client portals and nothing else.",
+                    body: "SuiteDash bundles CRM, HR tools, and project management you'll never use &mdash; and charges you for the privilege. ZiggyNexus is built specifically for client portals and nothing else.",
                   },
                   {
                     title: "A cheaper price doesn't help if staff needs training",
-                    body: "The hidden cost of SuiteDash isn't the subscription — it's onboarding your team and hand-holding clients through the portal. ZiggyNexus requires zero client training.",
+                    body: "The hidden cost of SuiteDash isn't the subscription &mdash; it's onboarding your team and hand-holding clients through the portal. ZiggyNexus requires zero client training.",
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4">
@@ -315,7 +315,7 @@ export default function VsSuiteDashPage() {
             Simple, modern, and half the price.
           </h2>
           <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
-            Get everything SuiteDash offers for client portals — without the
+            Get everything SuiteDash offers for client portals &mdash; without the
             complexity, without the outdated UI, and at $60/mo less.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -323,7 +323,7 @@ export default function VsSuiteDashPage() {
               href="https://app.ziggynexus.com/signup"
               className="bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-4 rounded-xl text-base transition-colors inline-flex items-center justify-center gap-2"
             >
-              Start Free Trial — $39/mo
+              Start Free Trial &mdash; $39/mo
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>

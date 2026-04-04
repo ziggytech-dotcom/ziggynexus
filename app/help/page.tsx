@@ -54,7 +54,7 @@ export default async function HelpPage() {
           Help & FAQ
         </h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>
-          Find answers to common questions — no need to send an email.
+          Find answers to common questions &mdash; no need to send an email.
         </p>
       </div>
 

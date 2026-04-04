@@ -12,12 +12,12 @@ const TOUR_STEPS = [
   {
     icon: '✓',
     title: 'Approvals',
-    body: 'When our team completes a deliverable, it lands here. Review the work, leave feedback, or approve it — all in one place. No more email chains.',
+    body: 'When our team completes a deliverable, it lands here. Review the work, leave feedback, or approve it &mdash; all in one place. No more email chains.',
   },
   {
     icon: '◈',
     title: 'Track Progress',
-    body: 'Watch your project move through each phase — Discovery, Brand Identity, Website, Content, and Launch. You\'ll always know exactly where things stand.',
+    body: 'Watch your project move through each phase &mdash; Discovery, Brand Identity, Website, Content, and Launch. You\'ll always know exactly where things stand.',
   },
 ]
 

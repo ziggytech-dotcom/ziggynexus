@@ -17,7 +17,7 @@ export async function upsertSharedContact(
   externalClientId?: string,
 ): Promise<void> {
   const workspaceId = process.env.SUPABASE_WORKSPACE_ID
-  if (!workspaceId) return // not configured — skip silently
+  if (!workspaceId) return // not configured &mdash; skip silently
 
   try {
     const supabase = createAdminClient()

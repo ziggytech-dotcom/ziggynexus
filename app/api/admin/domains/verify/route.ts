@@ -42,7 +42,7 @@ export async function POST(request: Request) {
     // Accept if CNAME resolves to our primary host (strip trailing dot)
     verified = resolvedCname.replace(/\.$/, '') === primaryHost
   } catch {
-    // DNS lookup failed — domain not configured or doesn't exist
+    // DNS lookup failed &mdash; domain not configured or doesn't exist
     verified = false
   }
 

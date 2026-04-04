@@ -11,8 +11,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ZiggyNexus — ZiggyTech Business Suite',
-  description: 'Your private client portal. Everything being built for you — in one place.',
+  title: 'ZiggyNexus &mdash; ZiggyTech Business Suite',
+  description: 'Your private client portal. Everything being built for you &mdash; in one place.',
   icons: {
     icon: '/favicon.ico',
   },

@@ -20,7 +20,7 @@ export default async function UploadsPage() {
     .order('created_at', { ascending: false })
 
   function formatBytes(bytes: number | null): string {
-    if (!bytes) return '—'
+    if (!bytes) return '&mdash;'
     if (bytes < 1024) return `${bytes} B`
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
     return `${(bytes / 1024 / 1024).toFixed(1)} MB`

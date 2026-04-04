@@ -18,7 +18,7 @@ export default async function ArticlePage({ params }: Props) {
     .eq('email', user?.email)
     .single()
 
-  // Fetch the article — must be published and accessible (global or client-specific)
+  // Fetch the article &mdash; must be published and accessible (global or client-specific)
   const { data: article } = await supabase
     .from('kb_articles')
     .select('*')
@@ -112,7 +112,7 @@ export default async function ArticlePage({ params }: Props) {
   )
 }
 
-// Minimal markdown renderer — only handles what we store: headings, bold, paragraphs, lists
+// Minimal markdown renderer &mdash; only handles what we store: headings, bold, paragraphs, lists
 function renderContent(raw: string): string {
   const escaped = raw
     .replace(/&/g, '&amp;')

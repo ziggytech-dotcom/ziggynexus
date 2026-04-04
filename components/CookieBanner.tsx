@@ -13,7 +13,7 @@ export default function CookieBanner() {
       const dismissed = localStorage.getItem(STORAGE_KEY)
       if (!dismissed) setVisible(true)
     } catch {
-      // localStorage unavailable (SSR, private mode) — don't show
+      // localStorage unavailable (SSR, private mode) &mdash; don't show
     }
   }, [])
 

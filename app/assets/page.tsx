@@ -68,7 +68,7 @@ export default async function AssetsPage() {
         </h1>
         <p style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>
           {totalCount > 0
-            ? `${totalCount} deliverable${totalCount === 1 ? '' : 's'} — all your work in one place.`
+            ? `${totalCount} deliverable${totalCount === 1 ? '' : 's'} &mdash; all your work in one place.`
             : 'Your deliverables will appear here as they\'re completed.'}
         </p>
       </div>

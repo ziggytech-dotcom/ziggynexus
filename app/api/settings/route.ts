@@ -16,7 +16,7 @@ export async function PATCH(request: Request) {
 
   // Validate hex color if provided
   if (body.brand_primary_color && !/^#[0-9A-Fa-f]{6}$/.test(body.brand_primary_color)) {
-    return NextResponse.json({ error: 'Invalid color format — use a 6-digit hex (#RRGGBB).' }, { status: 400 })
+    return NextResponse.json({ error: 'Invalid color format &mdash; use a 6-digit hex (#RRGGBB).' }, { status: 400 })
   }
 
   const { error } = await supabase

@@ -22,7 +22,7 @@ export default function ActivityTracker({ eventType, eventData = {} }: Props) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ eventType, eventData }),
     }).catch(() => {
-      // Non-critical — silently ignore tracking failures
+      // Non-critical &mdash; silently ignore tracking failures
     })
   }, [eventType, eventData])
 

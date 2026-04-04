@@ -44,7 +44,7 @@ export default async function InvoicesPage() {
         ziggyInvoices = data.invoices ?? []
       }
     } catch {
-      // Non-fatal — ZiggyInvoice section will be hidden
+      // Non-fatal &mdash; ZiggyInvoice section will be hidden
     }
   }
 
@@ -67,7 +67,7 @@ export default async function InvoicesPage() {
   }
 
   function formatDate(dateStr: string | null): string {
-    if (!dateStr) return '—'
+    if (!dateStr) return '&mdash;'
     return new Date(dateStr).toLocaleDateString('en-US', {
       month: 'short', day: 'numeric', year: 'numeric',
     })
@@ -204,7 +204,7 @@ export default async function InvoicesPage() {
               const badgeColor = overdue ? 'var(--status-rejected)' : isPaid ? 'var(--status-approved)' : 'var(--status-pending)'
               const badgeBg = overdue ? 'rgba(248,113,113,0.1)' : isPaid ? 'rgba(74,222,128,0.1)' : 'rgba(16,185,129,0.1)'
               const formattedAmount = new Intl.NumberFormat('en-US', { style: 'currency', currency: (inv.currency || 'usd').toUpperCase() }).format(inv.balance_due)
-              const formattedDate = inv.due_date ? new Date(inv.due_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '—'
+              const formattedDate = inv.due_date ? new Date(inv.due_date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '&mdash;'
 
               return (
                 <div

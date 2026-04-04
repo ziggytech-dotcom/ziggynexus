@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ZiggyNexus for Agencies — Client portals your clients will actually use",
+  title: "ZiggyNexus for Agencies &mdash; Client portals your clients will actually use",
   description:
-    "Scale your agency with branded client portals. ZiggyNexus gives every client their own workspace with invoicing, file sharing, e-sign, and messaging — for $39/mo.",
+    "Scale your agency with branded client portals. ZiggyNexus gives every client their own workspace with invoicing, file sharing, e-sign, and messaging &mdash; for $39/mo.",
 };
 
 const benefits = [
@@ -14,7 +14,7 @@ const benefits = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    title: "One portal per client — fully isolated",
+    title: "One portal per client &mdash; fully isolated",
     description:
       "Each client only sees their own work, their own invoices, and their own files. No data bleed, no confusion. Scale from 5 to 500 clients without a management headache.",
   },
@@ -66,7 +66,7 @@ const benefits = [
     ),
     title: "Sign contracts in under 3 hours",
     description:
-      "Upload your SOW or MSA, send it for e-signature, and your client signs from their portal — no DocuSign account required. Legally binding, with a full audit trail.",
+      "Upload your SOW or MSA, send it for e-signature, and your client signs from their portal &mdash; no DocuSign account required. Legally binding, with a full audit trail.",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function AgenciesPage() {
             </h1>
             <p className="text-xl text-zinc-400 leading-relaxed mb-10 max-w-2xl">
               Give every client a branded, professional portal that reflects your
-              agency — not a generic SaaS tool. Onboard faster, get paid faster,
+              agency &mdash; not a generic SaaS tool. Onboard faster, get paid faster,
               and stop managing client relationships across five different apps.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -157,7 +157,7 @@ export default function AgenciesPage() {
               Built for how agencies work
             </h2>
             <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-              Every feature was designed with agency workflows in mind — from
+              Every feature was designed with agency workflows in mind &mdash; from
               client onboarding to final invoice.
             </p>
           </div>

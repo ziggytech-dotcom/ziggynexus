@@ -69,7 +69,7 @@ export async function POST(request: Request) {
       to: user.email,
       subject: `Welcome to your ${branding.agencyName} portal`,
       html: welcomeEmail({ branding, clientName: client.name, portalUrl: siteUrl }),
-    }).catch(() => { /* non-fatal — don't block onboarding completion */ })
+    }).catch(() => { /* non-fatal &mdash; don't block onboarding completion */ })
   }
 
   return NextResponse.json({ success: true })

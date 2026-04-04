@@ -14,7 +14,7 @@ const jsonLd = {
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "url": "https://ziggynexus.com",
-      "description": "Client portal and collaboration hub for service businesses. Branded portals, secure file sharing, e-sign contracts, messaging, and invoicing — all for $39/mo.",
+      "description": "Client portal and collaboration hub for service businesses. Branded portals, secure file sharing, e-sign contracts, messaging, and invoicing &mdash; all for $39/mo.",
       "offers": {
         "@type": "Offer",
         "price": "39.00",
@@ -24,7 +24,7 @@ const jsonLd = {
           "price": "39.00",
           "priceCurrency": "USD",
           "unitText": "MONTH",
-          "description": "Base plan — 5 seats included. Additional seats $12/seat/mo."
+          "description": "Base plan &mdash; 5 seats included. Additional seats $12/seat/mo."
         }
       }
     },
@@ -52,7 +52,7 @@ const jsonLd = {
           "name": "Can I use my own domain for client portals?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Every portal is white-labeled with your branding — your logo, your colors, your custom domain. Clients see your brand, not ZiggyNexus."
+            "text": "Yes. Every portal is white-labeled with your branding &mdash; your logo, your colors, your custom domain. Clients see your brand, not ZiggyNexus."
           }
         },
         {
@@ -60,7 +60,7 @@ const jsonLd = {
           "name": "How does the free trial work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You get 14 days free — no credit card required. Full access to all live features from day one. If it's not for you, just walk away."
+            "text": "You get 14 days free &mdash; no credit card required. Full access to all live features from day one. If it's not for you, just walk away."
           }
         },
         {
@@ -68,7 +68,7 @@ const jsonLd = {
           "name": "Do I need DocuSign for contract signing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. ZiggyNexus includes built-in e-signature — no DocuSign, no HelloSign, no add-ons. Send a contract, get it signed, store it in the portal. Done."
+            "text": "No. ZiggyNexus includes built-in e-signature &mdash; no DocuSign, no HelloSign, no add-ons. Send a contract, get it signed, store it in the portal. Done."
           }
         },
         {
@@ -76,7 +76,7 @@ const jsonLd = {
           "name": "How does payment collection work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ZiggyNexus connects to Stripe. Send an invoice from inside the portal and your client pays via card or ACH — directly from their portal login. Funds go straight to your Stripe account."
+            "text": "ZiggyNexus connects to Stripe. Send an invoice from inside the portal and your client pays via card or ACH &mdash; directly from their portal login. Funds go straight to your Stripe account."
           }
         }
       ]
@@ -186,7 +186,7 @@ export default function Home() {
         </h1>
 
         <p style={{ fontSize: 19, color: "#888", lineHeight: 1.6, marginBottom: 40, maxWidth: 600, margin: "0 auto 40px" }}>
-          Stop managing clients over email, Slack, and Google Drive. Give every client a branded portal — with file sharing, e-sign contracts, messaging, and invoicing — for <strong style={{ color: "#fff" }}>$39/mo</strong>.
+          Stop managing clients over email, Slack, and Google Drive. Give every client a branded portal &mdash; with file sharing, e-sign contracts, messaging, and invoicing &mdash; for <strong style={{ color: "#fff" }}>$39/mo</strong>.
         </p>
 
         <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", marginBottom: 20 }}>
@@ -198,7 +198,7 @@ export default function Home() {
             fontSize: 16,
             fontWeight: 600,
           }}>
-            Start Free Trial — 14 days free
+            Start Free Trial &mdash; 14 days free
           </a>
           <a href="#pricing" style={{
             background: "transparent",
@@ -228,7 +228,7 @@ export default function Home() {
           {[
             "✅ 5 seats included at $39/mo",
             "🔒 White-label your own domain",
-            "✍️ Built-in e-sign — no DocuSign",
+            "✍️ Built-in e-sign &mdash; no DocuSign",
           ].map(badge => (
             <span key={badge} style={{
               fontSize: 13,
@@ -263,7 +263,7 @@ export default function Home() {
             {
               emoji: "📧",
               headline: "Email is not a client portal.",
-              body: "Files buried in threads, contracts sent back and forth as attachments, clients asking \"where's the doc?\" — sound familiar? There's a better way.",
+              body: "Files buried in threads, contracts sent back and forth as attachments, clients asking \"where's the doc?\" &mdash; sound familiar? There's a better way.",
             },
             {
               emoji: "🔗",
@@ -273,7 +273,7 @@ export default function Home() {
             {
               emoji: "💸",
               headline: "Copilot charges $69 per seat.",
-              body: "A 5-person agency pays $345/mo just for client portals. That's insane. ZiggyNexus includes 5 seats at $39/mo — same experience, fraction of the cost.",
+              body: "A 5-person agency pays $345/mo just for client portals. That's insane. ZiggyNexus includes 5 seats at $39/mo &mdash; same experience, fraction of the cost.",
             },
           ].map(({ emoji, headline, body }) => (
             <div key={headline}>
@@ -305,7 +305,7 @@ export default function Home() {
             {
               icon: "🏷️",
               title: "Branded Client Portal",
-              desc: "Your logo, your domain, your colors. Every client gets their own white-labeled portal — it looks and feels like an extension of your business, not a third-party tool.",
+              desc: "Your logo, your domain, your colors. Every client gets their own white-labeled portal &mdash; it looks and feels like an extension of your business, not a third-party tool.",
             },
             {
               icon: "📁",
@@ -320,22 +320,22 @@ export default function Home() {
             {
               icon: "✍️",
               title: "E-Sign Contracts",
-              desc: "Send contracts for legally binding electronic signature — built right in. No DocuSign, no HelloSign, no add-ons. Track who signed, who viewed, who declined.",
+              desc: "Send contracts for legally binding electronic signature &mdash; built right in. No DocuSign, no HelloSign, no add-ons. Track who signed, who viewed, who declined.",
             },
             {
               icon: "💳",
               title: "Invoicing & Payments",
-              desc: "Send invoices and collect payment via Stripe — directly inside the client's portal. Card and ACH accepted. Funds go straight to your account.",
+              desc: "Send invoices and collect payment via Stripe &mdash; directly inside the client's portal. Card and ACH accepted. Funds go straight to your account.",
             },
             {
               icon: "📊",
               title: "Project Status Updates",
-              desc: "Clients see progress without you sending a weekly email. Update milestones and statuses inside the portal — clients log in and see what's done and what's next.",
+              desc: "Clients see progress without you sending a weekly email. Update milestones and statuses inside the portal &mdash; clients log in and see what's done and what's next.",
             },
             {
               icon: "📋",
               title: "Intake Forms",
-              desc: "Collect project briefs, onboarding info, creative assets, and approvals — all through structured forms inside the portal. No more back-and-forth for basic info.",
+              desc: "Collect project briefs, onboarding info, creative assets, and approvals &mdash; all through structured forms inside the portal. No more back-and-forth for basic info.",
             },
             {
               icon: "📚",
@@ -381,7 +381,7 @@ export default function Home() {
                 title: "Video Updates",
                 badge: "Coming Soon",
                 badgeColor: "#0066ff",
-                desc: "Record short video messages for clients — right inside the portal. No Loom account needed.",
+                desc: "Record short video messages for clients &mdash; right inside the portal. No Loom account needed.",
               },
               {
                 icon: "⭐",
@@ -439,7 +439,7 @@ export default function Home() {
               Built for your industry
             </h2>
             <p style={{ fontSize: 17, color: "#666", maxWidth: 520, margin: "0 auto" }}>
-              Whether you run an agency, a consultancy, or a coaching practice — ZiggyNexus fits your workflow.
+              Whether you run an agency, a consultancy, or a coaching practice &mdash; ZiggyNexus fits your workflow.
             </p>
           </div>
 
@@ -450,12 +450,12 @@ export default function Home() {
             marginBottom: 40,
           }}>
             {[
-              { icon: "🎨", name: "Marketing & Creative Agencies", desc: "Client portals for every account — campaign files, approvals, deliverables, and reporting in one place." },
+              { icon: "🎨", name: "Marketing & Creative Agencies", desc: "Client portals for every account &mdash; campaign files, approvals, deliverables, and reporting in one place." },
               { icon: "💻", name: "Web & Dev Agencies", desc: "Project portals with staging links, dev updates, feedback loops, and final file delivery." },
-              { icon: "💼", name: "Consultants & Advisors", desc: "Deliverable sharing, meeting notes, strategy docs, and engagement contracts — all client-facing." },
+              { icon: "💼", name: "Consultants & Advisors", desc: "Deliverable sharing, meeting notes, strategy docs, and engagement contracts &mdash; all client-facing." },
               { icon: "🎓", name: "Coaches & Course Creators", desc: "Student portals with homework submission, course materials, progress tracking, and session notes." },
               { icon: "🏠", name: "Real Estate Agencies", desc: "Transaction portals with document collection, inspection reports, and milestone updates for buyers and sellers." },
-              { icon: "📊", name: "Accounting & Finance", desc: "Secure document exchange for tax docs, statements, and reports — with built-in messaging for client queries." },
+              { icon: "📊", name: "Accounting & Finance", desc: "Secure document exchange for tax docs, statements, and reports &mdash; with built-in messaging for client queries." },
               { icon: "🏗️", name: "Architects & Interior Design", desc: "Design reviews, mood boards, project timelines, material approvals, and contractor coordination." },
               { icon: "🎯", name: "PR & Communications", desc: "Campaign portals with press materials, media kits, coverage reports, and approval workflows." },
             ].map(({ icon, name, desc }) => (
@@ -545,7 +545,7 @@ export default function Home() {
                 ["Intake forms", "✅ Yes", "✅ Yes"],
                 ["Knowledge base", "✅ Yes", "✅ Yes"],
                 ["Video updates", "🔧 Coming Soon", "✅ Yes"],
-                ["Contract required", "No — cancel anytime", "No"],
+                ["Contract required", "No &mdash; cancel anytime", "No"],
               ].map(([feature, nexus, copilot], i) => (
                 <tr key={feature} style={{ background: i % 2 === 0 ? "transparent" : "#0d0d0d" }}>
                   <td style={{ padding: "14px 20px", color: "#888", borderBottom: "1px solid #161616" }}>{feature}</td>
@@ -566,7 +566,7 @@ export default function Home() {
           textAlign: "center",
         }}>
           <p style={{ color: "#ccc", fontSize: 15, lineHeight: 1.7 }}>
-            💡 <strong style={{ color: "#fff" }}>Bottom line:</strong> Copilot charges $69/mo for 1 seat — a 5-person team is $345/mo. ZiggyNexus includes 5 seats at $39/mo. Same client portal experience, <strong style={{ color: ACCENT }}>89% cheaper for a team.</strong>
+            💡 <strong style={{ color: "#fff" }}>Bottom line:</strong> Copilot charges $69/mo for 1 seat &mdash; a 5-person team is $345/mo. ZiggyNexus includes 5 seats at $39/mo. Same client portal experience, <strong style={{ color: ACCENT }}>89% cheaper for a team.</strong>
           </p>
         </div>
 
@@ -598,7 +598,7 @@ export default function Home() {
             marginBottom: 20,
           }}>
             <div style={{ fontSize: 13, fontWeight: 700, color: ACCENT, textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 12 }}>
-              ZiggyNexus — Base Plan
+              ZiggyNexus &mdash; Base Plan
             </div>
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: 4, marginBottom: 4 }}>
               <span style={{ fontSize: 64, fontWeight: 700, color: "#fff", letterSpacing: "-2px" }}>$39</span>
@@ -637,7 +637,7 @@ export default function Home() {
               fontWeight: 700,
               textAlign: "center",
             }}>
-              Start Free Trial — No credit card required
+              Start Free Trial &mdash; No credit card required
             </a>
           </div>
 
@@ -650,7 +650,7 @@ export default function Home() {
             textAlign: "center",
           }}>
             <p style={{ color: "#888", fontSize: 14, lineHeight: 1.6 }}>
-              🏢 <strong style={{ color: "#fff" }}>Running a full business?</strong> Get all ZiggyTech apps — including ZiggyNexus — for a flat monthly rate with the ZiggyTech Business Suite.{" "}
+              🏢 <strong style={{ color: "#fff" }}>Running a full business?</strong> Get all ZiggyTech apps &mdash; including ZiggyNexus &mdash; for a flat monthly rate with the ZiggyTech Business Suite.{" "}
               <a href="https://ziggybusiness.com" style={{ color: ACCENT, textDecoration: "underline" }}>Learn more →</a>
             </p>
           </div>
@@ -675,11 +675,11 @@ export default function Home() {
             },
             {
               q: "Can I use my own domain for client portals?",
-              a: "Yes. Every portal is white-labeled with your branding — your logo, your colors, and your custom domain. Clients see your brand, not ZiggyNexus.",
+              a: "Yes. Every portal is white-labeled with your branding &mdash; your logo, your colors, and your custom domain. Clients see your brand, not ZiggyNexus.",
             },
             {
               q: "How does the free trial work?",
-              a: "Sign up and get 14 days free — no credit card required. Full access to every live feature from day one. If it's not for you, just walk away. Nothing to cancel.",
+              a: "Sign up and get 14 days free &mdash; no credit card required. Full access to every live feature from day one. If it's not for you, just walk away. Nothing to cancel.",
             },
             {
               q: "Do I need DocuSign for contract signing?",
@@ -687,7 +687,7 @@ export default function Home() {
             },
             {
               q: "How does payment collection work?",
-              a: "ZiggyNexus connects to Stripe. Send an invoice from inside the portal and your client pays via card or ACH — directly from their portal login. Funds hit your Stripe account automatically.",
+              a: "ZiggyNexus connects to Stripe. Send an invoice from inside the portal and your client pays via card or ACH &mdash; directly from their portal login. Funds hit your Stripe account automatically.",
             },
           ].map(({ q, a }) => (
             <details key={q} style={{

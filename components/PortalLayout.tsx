@@ -34,7 +34,7 @@ export default async function PortalLayout({
   }
 
   // Build brand-specific CSS overrides. Only emit the style tag when a
-  // non-default primary color is present — otherwise use the global defaults.
+  // non-default primary color is present &mdash; otherwise use the global defaults.
   const primaryColor = branding.brand_primary_color
   const brandCss = primaryColor && primaryColor !== '#10b981'
     ? `
@@ -52,7 +52,7 @@ export default async function PortalLayout({
   return (
     <>
       {brandCss && (
-        // Scoped brand color override — safe: value comes from agency-controlled DB
+        // Scoped brand color override &mdash; safe: value comes from agency-controlled DB
         // eslint-disable-next-line react/no-danger
         <style dangerouslySetInnerHTML={{ __html: brandCss }} />
       )}

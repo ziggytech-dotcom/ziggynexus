@@ -195,7 +195,7 @@ export default function OnboardingPage() {
                   textAlign: 'center',
                 }}
               >
-                This is your private portal — your central hub for reviewing work, tracking your
+                This is your private portal &mdash; your central hub for reviewing work, tracking your
                 project, and collaborating with our team. It&apos;ll only take 2 minutes to set up.
               </p>
               <ul

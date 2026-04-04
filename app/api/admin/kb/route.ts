@@ -10,8 +10,8 @@ async function assertAdmin(supabase: Awaited<ReturnType<typeof createClient>>) {
   return user
 }
 
-// GET /api/admin/kb — list all articles
-// GET /api/admin/kb?id=… — fetch single article with content
+// GET /api/admin/kb &mdash; list all articles
+// GET /api/admin/kb?id=… &mdash; fetch single article with content
 export async function GET(request: Request) {
   const supabase = await createClient()
   const user = await assertAdmin(supabase)
@@ -37,7 +37,7 @@ export async function GET(request: Request) {
   return NextResponse.json({ articles })
 }
 
-// POST /api/admin/kb — create article
+// POST /api/admin/kb &mdash; create article
 export async function POST(request: Request) {
   const supabase = await createClient()
   const user = await assertAdmin(supabase)
@@ -79,7 +79,7 @@ export async function POST(request: Request) {
   return NextResponse.json({ success: true, article: data })
 }
 
-// PATCH /api/admin/kb — update article
+// PATCH /api/admin/kb &mdash; update article
 export async function PATCH(request: Request) {
   const supabase = await createClient()
   const user = await assertAdmin(supabase)
@@ -116,7 +116,7 @@ export async function PATCH(request: Request) {
   return NextResponse.json({ success: true })
 }
 
-// DELETE /api/admin/kb — delete article
+// DELETE /api/admin/kb &mdash; delete article
 export async function DELETE(request: Request) {
   const supabase = await createClient()
   const user = await assertAdmin(supabase)

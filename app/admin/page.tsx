@@ -171,7 +171,7 @@ export default async function AdminPage() {
                           // eslint-disable-next-line @typescript-eslint/no-explicit-any
                           (event.event_data as any).article_title &&
                           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                          ` — "${(event.event_data as any).article_title}"`
+                          ` &mdash; "${(event.event_data as any).article_title}"`
                         }
                       </div>
                     </div>

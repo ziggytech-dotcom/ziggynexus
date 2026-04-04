@@ -56,7 +56,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Deliverable not found' }, { status: 404 })
     }
 
-    subject = `New deliverable ready for your review — ${deliverable.title}`
+    subject = `New deliverable ready for your review &mdash; ${deliverable.title}`
     html = newDeliverableEmail({
       branding,
       clientName: client.name,
@@ -82,7 +82,7 @@ export async function POST(request: Request) {
       changes_requested: 'Changes Requested',
       rejected: 'Rejected',
     }
-    subject = `${deliverable.title} — ${statusLabels[newStatus] ?? newStatus}`
+    subject = `${deliverable.title} &mdash; ${statusLabels[newStatus] ?? newStatus}`
     html = approvalStatusEmail({
       branding,
       clientName: client.name,

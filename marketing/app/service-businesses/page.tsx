@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ZiggyNexus for Service Businesses — Impress clients. Streamline operations.",
+  title: "ZiggyNexus for Service Businesses &mdash; Impress clients. Streamline operations.",
   description:
-    "Service businesses use ZiggyNexus to manage client relationships, collect payments, share documents, and deliver a premium experience — all for $39/mo.",
+    "Service businesses use ZiggyNexus to manage client relationships, collect payments, share documents, and deliver a premium experience &mdash; all for $39/mo.",
 };
 
 const industries = [
@@ -35,7 +35,7 @@ const industries = [
   {
     name: "IT & Managed Services",
     description:
-      "Keep clients updated with status reports, share documentation and guides, sign service agreements, and invoice for managed service retainers — all from one client workspace.",
+      "Keep clients updated with status reports, share documentation and guides, sign service agreements, and invoice for managed service retainers &mdash; all from one client workspace.",
     features: ["Status report sharing", "MSA e-sign", "Monthly retainer invoicing", "Support messaging"],
   },
   {
@@ -108,7 +108,7 @@ export default function ServiceBusinessesPage() {
             </h1>
             <p className="text-xl text-zinc-400 leading-relaxed mb-10 max-w-2xl">
               Service businesses of all kinds use ZiggyNexus to deliver a
-              premium client experience — from the first intake form to the final
+              premium client experience &mdash; from the first intake form to the final
               invoice. One platform replaces email, DocuSign, Dropbox, and
               FreshBooks.
             </p>
@@ -246,7 +246,7 @@ export default function ServiceBusinessesPage() {
                   </div>
                 ))}
                 <div className="flex items-center justify-between p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-sm">
-                  <span className="font-semibold">ZiggyNexus — all of the above</span>
+                  <span className="font-semibold">ZiggyNexus &mdash; all of the above</span>
                   <span className="font-bold text-emerald-500">$39/mo</span>
                 </div>
               </div>
@@ -264,13 +264,13 @@ export default function ServiceBusinessesPage() {
           </h2>
           <p className="text-zinc-400 text-xl mb-10 max-w-2xl mx-auto">
             Join 500+ service businesses already using ZiggyNexus. Start your
-            free 14-day trial — no credit card required.
+            free 14-day trial &mdash; no credit card required.
           </p>
           <a
             href="https://app.ziggynexus.com/signup"
             className="bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-8 py-4 rounded-xl text-base transition-colors inline-flex items-center gap-2"
           >
-            Get Started Free — $39/mo after trial
+            Get Started Free &mdash; $39/mo after trial
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>

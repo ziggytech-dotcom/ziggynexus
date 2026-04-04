@@ -166,7 +166,7 @@ export default function SideNav({ branding, hidePoweredBy }: SideNavProps) {
 
   return (
     <>
-      {/* Mobile top bar — visible only on mobile via CSS */}
+      {/* Mobile top bar &mdash; visible only on mobile via CSS */}
       <div className="mobile-topbar">
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           {branding?.brand_logo_url ? (
