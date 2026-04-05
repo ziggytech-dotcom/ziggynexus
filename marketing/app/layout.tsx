@@ -5,11 +5,11 @@ import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "ZiggyNexus &mdash; The client portal your clients will actually use.",
+    default: "ZiggyNexus — Client Portal & Collaboration",
     template: "%s | ZiggyNexus",
   },
   description:
-    "Give every client their own branded portal. Online invoicing, secure file sharing, e-sign contracts, client messaging, and more &mdash; starting at $39/mo.",
+    "Give your clients a branded portal for project updates, invoices, file sharing, and messaging. 14-day free trial, no credit card required.",
   keywords: [
     "client portal",
     "white label portal",
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "ZiggyNexus",
-    title: "ZiggyNexus &mdash; The client portal your clients will actually use.",
+    title: "ZiggyNexus — Client Portal & Collaboration",
     description:
-      "Give every client their own branded portal. Starting at $39/mo.",
+      "Give your clients a branded portal for project updates, invoices, file sharing, and messaging. 14-day free trial, no credit card required.",
     url: "https://ziggynexus.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZiggyNexus &mdash; The client portal your clients will actually use.",
+    title: "ZiggyNexus — Client Portal & Collaboration",
     description:
-      "Give every client their own branded portal. Starting at $39/mo.",
+      "Give your clients a branded portal for project updates, invoices, file sharing, and messaging. 14-day free trial, no credit card required.",
   },
   metadataBase: new URL("https://ziggynexus.com"),
 
